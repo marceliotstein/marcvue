@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <template v-for="job in jobs2">
-      <img class="job-item" :src="job.jobImage" />
-      <p>{{ job.jobTitle }}</p>
+      <img class="job-image" :src="job.jobImage" />
+      <div class="job-title">>{{ job.jobTitle }}</div>
     </template>
   </div>
 </template>
@@ -97,8 +97,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.job-item {
+.job-image {
   width: 400px;
+}
+
+.job-title {
+  font-size: 1.3em;
 }
 
 h1, h2 {
