@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <template v-for="job in jobs2">
       <img class="job-image" :src="job.jobImage" />
-      <div class="job-title">>{{ job.jobTitle }}</div>
+      <div class="job-title">{{ job.jobTitle }}</div>
     </template>
   </div>
 </template>
