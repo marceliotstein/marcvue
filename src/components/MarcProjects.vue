@@ -15,8 +15,8 @@ export default {
     return {
       jobs2: [
         { 
-          jobTitle: 'Pearl Jam',
-          jobImage: '/static/pearljam600.jpg'
+          jobTitle: 'Virtual Career Network',
+          jobImage: '/static/vcn600.jpg'
         }
       ],
       jobs: [
