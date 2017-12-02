@@ -16,7 +16,7 @@ export default {
 
 .mes-title {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 3em;
+  font-size: 5em;
   color: #000000;
 }
 
