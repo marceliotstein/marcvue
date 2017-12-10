@@ -89,13 +89,12 @@ export default {
           jobImage: '/static/powerbar600.jpg'
         }
       ],
-      msg: 'Recent Work ...'
+      msg: 'Recent Work'
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .job-image {
   width: 400px;
@@ -108,14 +107,17 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #000000;
 }
