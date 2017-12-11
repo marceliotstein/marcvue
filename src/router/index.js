@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MarcProjects from '@/components/MarcProjects'
+import MESProjects from '@/components/MESProjects'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'MarcProjects',
-      component: MarcProjects
+      name: 'MESProjects',
+      component: MESProjects
     }
   ]
 })
