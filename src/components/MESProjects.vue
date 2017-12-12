@@ -14,7 +14,7 @@
     </div>
     <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout">
       <div class="ifshowing" v-if="isShowing">
-        <div v-for="(proj, index) in recentProjects">
+        <div v-for="(proj, index) in recentProjects" v-if="proj.projShow">
            <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
            {{ index+1 }} ... {{ proj.projTitle }}
         </div>
@@ -34,22 +34,26 @@ export default {
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
           projImage: '/static/lpgdivorce600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: true
         },
         { 
           projTitle: 'Virtual Career Network',
           projImage: '/static/vcn600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false
         },
         { 
           projTitle: 'Power Bar',
           projImage: '/static/powerbar600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: true
         },
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: true
         },
       ],
       contentProjects: [
