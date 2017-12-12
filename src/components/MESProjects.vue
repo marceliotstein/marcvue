@@ -14,9 +14,9 @@
     </div>
     <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout">
       <div class="ifshowing" v-if="isShowing">
-        <div v-for="(job, index) in jobs">
-           <div v-bind:style="{ 'background-image': 'url(' + job.jobImage + ')' }" class="proj"></div>
-           {{ index+1 }} ... {{ job.jobTitle }}
+        <div v-for="(proj, index) in recentProjects">
+           <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
+           {{ index+1 }} ... {{ proj.projTitle }}
         </div>
       </div>
     </transition>
@@ -30,92 +30,105 @@ export default {
   data() {
     return {
       isShowing: false,
-      jobs: [
+      recentProjects: [
         { 
-          jobTitle: 'Educational Marketer',
-          jobImage: '/static/educationalmarketer600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'Law Firm of Laurence P. Greenberg',
+          projImage: '/static/lpgdivorce600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'Pearl Jam',
-          jobImage: '/static/pearljam600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Virtual Career Network',
+          projImage: '/static/vcn600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Words Without Borders',
-          jobImage: '/static/wwb600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'Power Bar',
+          projImage: '/static/powerbar600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'WellFormative Health',
-          jobImage: '/static/wellformative600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Pacifism for the 21st Century',
+          projImage: '/static/pacgogo600.jpg',
+          projClass: 'yellowish'
+        },
+      ],
+      contentProjects: [
+        { 
+          projTitle: 'Center for Disease Control',
+          projImage: '/static/cdc600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'Foreign Policy',
-          jobImage: '/static/foreignpolicy600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'Inference Data',
+          projImage: '/static/inference600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Law Firm of Laurence P. Greenberg',
-          jobImage: '/static/lpgdivorce600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Educational Marketer',
+          projImage: '/static/educationalmarketer600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Eli Stein Cartoons',
-          jobImage: '/static/elistein600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'WellFormative Health',
+          projImage: '/static/wellformative600.jpg',
+          projClass: 'yellowish'
+        },
+      ],
+      artmusicProjects: [
+        { 
+          projTitle: 'Pearl Jam',
+          projImage: '/static/pearljam600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'Practical Handbook of Group Counseling ',
-          jobImage: '/static/ghppracticalhandbooks600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Bob Dylan',
+          projImage: '/static/bobdylan600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'Literary Kicks',
-          jobImage: '/static/litkicks600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'Words Without Borders',
+          projImage: '/static/wwb600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Pacifism for the 21st Century',
-          jobImage: '/static/pacgogo600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Eli Stein Cartoons',
+          projImage: '/static/elistein600.jpg',
+          projClass: 'bluish'
+        },
+      ],
+      socialProjects: [
+        { 
+          projTitle: 'Foreign Policy',
+          projImage: '/static/foreignpolicy600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Time Inc. New Media',
-          jobImage: '/static/pathfinder600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'Practical Handbook of Group Counseling ',
+          projImage: '/static/ghppracticalhandbooks600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'iVillage.com',
-          jobImage: '/static/ivillage600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'Literary Kicks',
+          projImage: '/static/litkicks600.jpg',
+          projClass: 'bluish'
+        },
+      ],
+      earlyProjects: [
+        { 
+          projTitle: 'Time Inc. New Media',
+          projImage: '/static/pathfinder600.jpg',
+          projClass: 'bluish'
         },
         { 
-          jobTitle: 'Inference Data',
-          jobImage: '/static/inference600.jpg',
-          jobClass: 'bluish'
+          projTitle: 'iVillage.com',
+          projImage: '/static/ivillage600.jpg',
+          projClass: 'yellowish'
         },
         { 
-          jobTitle: 'History Channel',
-          jobImage: '/static/historychannel600.jpg',
-          jobClass: 'yellowish'
+          projTitle: 'History Channel',
+          projImage: '/static/historychannel600.jpg',
+          projClass: 'yellowish'
         },
-        { 
-          jobTitle: 'Virtual Career Network',
-          jobImage: '/static/vcn600.jpg',
-          jobClass: 'bluish'
-        },
-        { 
-          jobTitle: 'Center for Disease Control',
-          jobImage: '/static/cdc600.jpg',
-          jobClass: 'yellowish'
-        },
-        { 
-          jobTitle: 'Power Bar',
-          jobImage: '/static/powerbar600.jpg',
-          jobClass: 'bluish'
-        }
       ],
       msg: 'Recent Work.'
     }
