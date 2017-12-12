@@ -4,15 +4,14 @@
  * MarcEliotStein.com
  */
 <template>
-  <div class="wrapper">
+  <div id="mesproj">
     <h1>{{ msg }}</h1>
     <div class="buttonbox">
-      <button @click="toggleShow">
-        <span v-if="isShowing">Next One</span>
-        <span v-else>Show First</span>
+      <button @click="startShow">
+        <span>Do This</span>
       </button>
     </div>
-    <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout">
+    <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
       <div class="ifshowing" v-if="isShowing">
         <div v-for="(proj, index) in recentProjects" v-if="proj.projShow">
            <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
@@ -134,12 +133,18 @@ export default {
           projClass: 'yellowish'
         },
       ],
-      msg: 'Recent Work.'
+      msg: 'Recent Work.',
     }
   },
   methods: {
-    toggleShow() {
-      this.isShowing = !this.isShowing;
+    startShow() {
+      this.isShowing = true;
+    },
+    afterEnter: function (el) {
+      this.isShowing = false;
+    },
+    afterLeave: function (el) {
+      this.isShowing = true;
     }
  }
 }
@@ -150,7 +155,7 @@ export default {
     transform: translate3d(0, $yaxis, 0);
   }
 
-  .wrapper {
+  #mesproj {
     text-align: center;
     margin: 0 auto;
   }
@@ -201,7 +206,7 @@ export default {
     border-color: #dfdf5f;
   }
 
-  @keyframes bouncein { 
+  @keyframes bounceframes { 
     1% { @include projb(-400px); }
     20%, 40%, 60%, 80%, 95%, 99%, 100% { @include projb() }
     30% { @include projb(-80px); }
@@ -211,12 +216,12 @@ export default {
     97% { @include projb(-10px); }
   }
 
-  @keyframes rollout { 
+  @keyframes rollframes-slide { 
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(1000px, 0, 0); }
   }
 
-  @keyframes projroll {
+  @keyframes rollframes-spin {
     0% { transform: rotate(0); }
     100% { transform: rotate(1000deg); }
   }
@@ -226,15 +231,15 @@ export default {
   }
 
   .bouncein { 
-    animation: bouncein 5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    animation: bounceframes 5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
 
   .rollout { 
     width: 60px;
     height: 60px;
-    animation: rollout 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-slide 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: projroll 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-spin 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
     text-align: center;
     margin: 0 auto;
