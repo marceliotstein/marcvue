@@ -46,13 +46,13 @@ export default {
           projTitle: 'Power Bar',
           projImage: '/static/powerbar600.jpg',
           projClass: 'bluish',
-          projShow: true
+          projShow: false 
         },
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
           projClass: 'yellowish',
-          projShow: true
+          projShow: false
         },
       ],
       contentProjects: [
@@ -144,6 +144,19 @@ export default {
       this.isShowing = false;
     },
     afterLeave: function (el) {
+      if (this.recentProjects[0].projShow == true) {
+        this.recentProjects[0].projShow = false;
+        this.recentProjects[1].projShow = true;
+      } else if (this.recentProjects[1].projShow == true) {
+        this.recentProjects[1].projShow = false;
+        this.recentProjects[2].projShow = true;
+      } else if (this.recentProjects[2].projShow == true) {
+        this.recentProjects[2].projShow = false;
+        this.recentProjects[3].projShow = true;
+      } else if (this.recentProjects[3].projShow == true) {
+        this.recentProjects[3].projShow = false;
+        this.recentProjects[0].projShow = true;
+      }
       this.isShowing = true;
     }
  }
@@ -231,15 +244,15 @@ export default {
   }
 
   .bouncein { 
-    animation: bounceframes 5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    animation: bounceframes 4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
 
   .rollout { 
     width: 60px;
     height: 60px;
-    animation: rollframes-slide 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-slide 8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: rollframes-spin 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-spin 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
     text-align: center;
     margin: 0 auto;
