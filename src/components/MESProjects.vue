@@ -5,8 +5,7 @@
  */
 <template>
   <div id="mesproj">
-    <h1>{{ msg }}</h1>
-    <h4>{{ $route.params.projset }}</h4>
+    <h1>{{ msg + displayMsg }}</h1>
     <div class="buttonbox">
       <button @click="startShow">
         <span>Do This</span>
@@ -14,7 +13,7 @@
     </div>
     <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
       <div class="ifshowing" v-if="isShowing">
-        <div v-for="(proj, index) in recentProjects" v-if="proj.projShow">
+        <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
            <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
            {{ index+1 }} ... {{ proj.projTitle }}
         </div>
@@ -27,19 +26,6 @@
 <script>
 export default {
   name: 'MESProjects',
-  beforeUpdate: function() {
-    if (this.$route.params.projset) {
-      if (this.$route.params.projset=='social') {
-        this.msg = 'Social Media Strategy'; 
-      } else if (this.$route.params.projset=='seo') {
-        this.msg = 'SEO & Metadata'; 
-      } else {
-        this.msg = this.$route.params.projset;
-      }
-    } else {
-      this.msg = 'Recent Work';
-    }
-  },
   data() {
     return {
       isShowing: false,
@@ -73,81 +59,115 @@ export default {
         { 
           projTitle: 'Center for Disease Control',
           projImage: '/static/cdc600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: true
         },
         { 
           projTitle: 'Inference Data',
           projImage: '/static/inference600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false
         },
         { 
           projTitle: 'Educational Marketer',
           projImage: '/static/educationalmarketer600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false
         },
         { 
           projTitle: 'WellFormative Health',
           projImage: '/static/wellformative600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: false
         },
       ],
       artmusicProjects: [
         { 
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: true
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: false,
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false,
         },
       ],
       socialProjects: [
         { 
           projTitle: 'Foreign Policy',
           projImage: '/static/foreignpolicy600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: true
         },
         { 
           projTitle: 'Practical Handbook of Group Counseling ',
           projImage: '/static/ghppracticalhandbooks600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: false
         },
         { 
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: false
         },
       ],
       earlyProjects: [
         { 
           projTitle: 'Time Inc. New Media',
           projImage: '/static/pathfinder600.jpg',
-          projClass: 'bluish'
+          projClass: 'bluish',
+          projShow: true
         },
         { 
           projTitle: 'iVillage.com',
           projImage: '/static/ivillage600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: false
         },
         { 
           projTitle: 'History Channel',
           projImage: '/static/historychannel600.jpg',
-          projClass: 'yellowish'
+          projClass: 'yellowish',
+          projShow: false
         },
       ],
       msg: '',
+    }
+  },
+  computed: {
+    filteredProjects: function() {
+      return this.artmusicProjects;
+    },
+    displayMsg: function() {
+      let newMsg = 'Recent Work';
+      if (this.$route.params.projset) {
+        if (this.$route.params.projset=='social') {
+          newMsg = 'Social Media Strategy'; 
+        } else if (this.$route.params.projset=='seo') {
+          newMsg = 'SEO & Metadata'; 
+        } else if (this.$route.params.projset=='activism') {
+          newMsg = 'Political Activism'; 
+        } else {
+          newMsg = this.$route.params.projset;
+        }
+      }
+      return(newMsg);
     }
   },
   methods: {
@@ -158,18 +178,18 @@ export default {
       this.isShowing = false;
     },
     afterLeave: function (el) {
-      if (this.recentProjects[0].projShow == true) {
-        this.recentProjects[0].projShow = false;
-        this.recentProjects[1].projShow = true;
-      } else if (this.recentProjects[1].projShow == true) {
-        this.recentProjects[1].projShow = false;
-        this.recentProjects[2].projShow = true;
-      } else if (this.recentProjects[2].projShow == true) {
-        this.recentProjects[2].projShow = false;
-        this.recentProjects[3].projShow = true;
-      } else if (this.recentProjects[3].projShow == true) {
-        this.recentProjects[3].projShow = false;
-        this.recentProjects[0].projShow = true;
+      if (this.filteredProjects[0].projShow == true) {
+        this.filteredProjects[0].projShow = false;
+        this.filteredProjects[1].projShow = true;
+      } else if (this.filteredProjects[1].projShow == true) {
+        this.filteredProjects[1].projShow = false;
+        this.filteredProjects[2].projShow = true;
+      } else if (this.filteredProjects[2].projShow == true) {
+        this.filteredProjects[2].projShow = false;
+        this.filteredProjects[3].projShow = true;
+      } else if (this.filteredProjects[3].projShow == true) {
+        this.filteredProjects[3].projShow = false;
+        this.filteredProjects[0].projShow = true;
       }
       this.isShowing = true;
     }
