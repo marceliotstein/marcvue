@@ -6,6 +6,7 @@
 <template>
   <div id="mesproj">
     <h1>{{ msg }}</h1>
+    <h4>{{ $route.params.projset }}</h4>
     <div class="buttonbox">
       <button @click="startShow">
         <span>Do This</span>
@@ -26,6 +27,19 @@
 <script>
 export default {
   name: 'MESProjects',
+  beforeUpdate: function() {
+    if (this.$route.params.projset) {
+      if (this.$route.params.projset=='social') {
+        this.msg = 'Social Media Strategy'; 
+      } else if (this.$route.params.projset=='seo') {
+        this.msg = 'SEO & Metadata'; 
+      } else {
+        this.msg = this.$route.params.projset;
+      }
+    } else {
+      this.msg = 'Recent Work';
+    }
+  },
   data() {
     return {
       isShowing: false,
@@ -133,7 +147,7 @@ export default {
           projClass: 'yellowish'
         },
       ],
-      msg: 'Recent Work.',
+      msg: '',
     }
   },
   methods: {
