@@ -1,12 +1,16 @@
 <template>
   <div class="wrapper">
     <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
-    <router-link :to="{ path: 'social', params: { projSet: 'ABC' }}">Social Media Strategy</router-link>
+    <router-link to="/social">Social Media Strategy</router-link>
     <router-link to="/seo">SEO & Metadata</router-link>
     <router-link to="/design">UX & Design</router-link>
-    <router-link to="/drupal-wordpress">Drupal & WordPress</router-link>
-    <router-link to="/node-vue">Node.js & Vue.js</router-link>
-    <router-link to="/writing">Writing</router-link>
+    <router-link to="/drupal">Drupal</router-link>
+    <router-link to="/wordpress">WordPress</router-link>
+    <router-link to="/music">Music</router-link>
+    <router-link to="/literature">Literature</router-link>
+    <router-link to="/publishing">Publishing</router-link>
+    <router-link to="/law">Law</router-link>
+    <router-link to="/health">Health</router-link>
     <router-link to="/activism">Activism</router-link>
     <router-view/>
   </div>

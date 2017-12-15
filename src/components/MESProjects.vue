@@ -166,11 +166,8 @@ export default {
       let newList = new Array();
       let catFilter = this.$route.params.projset;
       let j = 0;
-      console.log("filter is " + catFilter);
       for (var i=0, len=this.projects.length; i<len; i++) {
-        console.log(this.projects[i].projCategories.toString());
         if (this.projects[i].projCategories.includes(catFilter)) {
-          console.log("adding " + this.projects[i].projTitle);    
           newList[j] = this.projects[i];
           // initialize only the first item for display 
           if (j==0) {
@@ -212,16 +209,17 @@ export default {
       //
       for (var i=0, len=this.filteredProjects.length; i<len; i++) {
         if (this.filteredProjects[i].projShow == true) {
-          console.log("afterLeave len = " + this.filteredProjects.length + " i = " + i);
           this.filteredProjects[i].projShow = false;
-          if (i==this.filteredProjects.length-1) {
+          let n = i + 1;
+          if (this.filteredProjects[n]) {
+            // display next item in list 
+            this.filteredProjects[n].projShow = true;
+          } else {
             // loop back to beginning of list 
             this.filteredProjects[0].projShow = true;
-          } else {
-            this.filteredProjects[i+1].projShow = true;
           }
+          break;
         }
-        break;
       }
       this.isShowing = true;
     }
@@ -310,15 +308,15 @@ export default {
   }
 
   .bouncein { 
-    animation: bounceframes 4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    animation: bounceframes 3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
 
   .rollout { 
     width: 60px;
     height: 60px;
-    animation: rollframes-slide 8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-slide 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: rollframes-spin 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
     text-align: center;
     margin: 0 auto;
