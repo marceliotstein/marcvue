@@ -15,7 +15,8 @@
       <div class="ifshowing" v-if="isShowing">
         <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
            <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-           {{ index+1 }} ... {{ proj.projTitle }}
+           <br />
+           {{ proj.projTitle }}
         </div>
       </div>
     </transition>
@@ -29,121 +30,131 @@ export default {
   data() {
     return {
       isShowing: false,
-      recentProjects: [
+      projects: [
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
           projImage: '/static/lpgdivorce600.jpg',
           projClass: 'yellowish',
-          projShow: true
+          projCategories: [ 'php', 'drupal', 'law', 'solo', 'design', 'recent' ],
+          projShow: false
         },
         { 
           projTitle: 'Virtual Career Network',
           projImage: '/static/vcn600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'php', 'drupal', 'government', 'social', 'team' ],
           projShow: false
         },
         { 
           projTitle: 'Power Bar',
           projImage: '/static/powerbar600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'php', 'drupal', 'product', 'team', 'recent' ],
           projShow: false 
         },
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
           projClass: 'yellowish',
+          projCategories: [ 'php', 'drupal', 'activism', 'fundraising', 'social', 'owner', 'solo', 'recent' ],
           projShow: false
         },
-      ],
-      contentProjects: [
         { 
           projTitle: 'Center for Disease Control',
           projImage: '/static/cdc600.jpg',
           projClass: 'yellowish',
-          projShow: true
+          projCategories: [ 'php', 'drupal', 'health', 'government', 'seo', 'manager' ],
+          projShow: false
         },
         { 
           projTitle: 'Inference Data',
           projImage: '/static/inference600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'java', 'law', 'seo', 'team' ],
           projShow: false
         },
         { 
           projTitle: 'Educational Marketer',
           projImage: '/static/educationalmarketer600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'php', 'drupal', 'publishing', 'solo' ],
           projShow: false
         },
         { 
           projTitle: 'WellFormative Health',
           projImage: '/static/wellformative600.jpg',
           projClass: 'yellowish',
+          projCategories: [ 'php', 'drupal', 'health', 'solo', 'commerce' ],
           projShow: false
         },
-      ],
-      artmusicProjects: [
         { 
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
           projClass: 'yellowish',
-          projShow: true
+          projCategories: [ 'php', 'wordpress', 'music', 'solo' ],
+          projShow: false
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
           projClass: 'yellowish',
-          projShow: false,
+          projCategories: [ 'java', 'music', 'solo', 'early' ],
+          projShow: false
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'php', 'literature', 'solo', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
           projClass: 'bluish',
-          projShow: false,
+          projCategories: [ 'php', 'drupal', 'arts', 'solo' ],
+          projShow: false
         },
-      ],
-      socialProjects: [
         { 
           projTitle: 'Foreign Policy',
           projImage: '/static/foreignpolicy600.jpg',
           projClass: 'bluish',
-          projShow: true
+          projCategories: [ 'php', 'drupal', 'publishing', 'manager', 'social' ],
+          projShow: false
         },
         { 
           projTitle: 'Practical Handbook of Group Counseling ',
           projImage: '/static/ghppracticalhandbooks600.jpg',
           projClass: 'yellowish',
+          projCategories: [ 'php', 'drupal', 'publishing', 'commerce', 'solo', 'design' ],
           projShow: false
         },
         { 
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
           projClass: 'bluish',
+          projCategories: [ 'php', 'drupal', 'literature', 'owner', 'social', 'design' ],
           projShow: false
         },
-      ],
-      earlyProjects: [
         { 
           projTitle: 'Time Inc. New Media',
           projImage: '/static/pathfinder600.jpg',
           projClass: 'bluish',
-          projShow: true
+          projCategories: [ 'c++', 'perl', 'publishing', 'manager', 'seo', 'early' ],
+          projShow: false
         },
         { 
           projTitle: 'iVillage.com',
           projImage: '/static/ivillage600.jpg',
           projClass: 'yellowish',
+          projCategories: [ 'java', 'publishing', 'social', 'manager', 'seo', 'early' ],
           projShow: false
         },
         { 
           projTitle: 'History Channel',
           projImage: '/static/historychannel600.jpg',
           projClass: 'yellowish',
+          projCategories: [ 'java', 'publishing', 'team', 'seo' ],
           projShow: false
         },
       ],
@@ -152,7 +163,25 @@ export default {
   },
   computed: {
     filteredProjects: function() {
-      return this.artmusicProjects;
+      let newList = new Array();
+      let catFilter = this.$route.params.projset;
+      let j = 0;
+      console.log("filter is " + catFilter);
+      for (var i=0, len=this.projects.length; i<len; i++) {
+        console.log(this.projects[i].projCategories.toString());
+        if (this.projects[i].projCategories.includes(catFilter)) {
+          console.log("adding " + this.projects[i].projTitle);    
+          newList[j] = this.projects[i];
+          // initialize only the first item for display 
+          if (j==0) {
+            newList[j].projShow = true;
+          } else {
+            newList[j].projShow = false;
+          }
+          j++;
+        }
+      }
+      return newList;
     },
     displayMsg: function() {
       let newMsg = 'Recent Work';
@@ -178,18 +207,21 @@ export default {
       this.isShowing = false;
     },
     afterLeave: function (el) {
-      if (this.filteredProjects[0].projShow == true) {
-        this.filteredProjects[0].projShow = false;
-        this.filteredProjects[1].projShow = true;
-      } else if (this.filteredProjects[1].projShow == true) {
-        this.filteredProjects[1].projShow = false;
-        this.filteredProjects[2].projShow = true;
-      } else if (this.filteredProjects[2].projShow == true) {
-        this.filteredProjects[2].projShow = false;
-        this.filteredProjects[3].projShow = true;
-      } else if (this.filteredProjects[3].projShow == true) {
-        this.filteredProjects[3].projShow = false;
-        this.filteredProjects[0].projShow = true;
+      //
+      // we already displayed this item, now display the next one
+      //
+      for (var i=0, len=this.filteredProjects.length; i<len; i++) {
+        if (this.filteredProjects[i].projShow == true) {
+          console.log("afterLeave len = " + this.filteredProjects.length + " i = " + i);
+          this.filteredProjects[i].projShow = false;
+          if (i==this.filteredProjects.length-1) {
+            // loop back to beginning of list 
+            this.filteredProjects[0].projShow = true;
+          } else {
+            this.filteredProjects[i+1].projShow = true;
+          }
+        }
+        break;
       }
       this.isShowing = true;
     }
