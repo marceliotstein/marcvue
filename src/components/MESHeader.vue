@@ -5,6 +5,15 @@
  */
 <template>
   <div id="mes-head">
+    <hamburger-menu-button></hamburger-menu-button>
+    <hamburger-menu>
+      <ul>
+        <li><a href="#1">Link 1</a></li>
+        <li><a href="#2">Link 2</a></li>
+        <li><a href="#3">Link 3</a></li>
+        <li><a href="#4">Link 4</a></li>
+      </ul>
+    </hamburger-menu>
     <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
     <router-link to="/social">Social Media Strategy</router-link>
     <router-link to="/seo">SEO & Metadata</router-link>
@@ -21,8 +30,20 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Vuex from 'vuex';
+import store from '@/store';
+import { hamburgerMenu, hamburgerMenuButton } from '@profesia/vue-hamburger-menu-component';
+
+Vue.use('Vuex');
+
 export default {
+  store,
   name: 'MESHeader',
+  components: {
+    hamburgerMenu,
+    hamburgerMenuButton
+  },
 }
 </script>
 
