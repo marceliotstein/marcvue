@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <MESHeader></MESHeader>
     <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
     <router-link to="/social">Social Media Strategy</router-link>
     <router-link to="/seo">SEO & Metadata</router-link>
@@ -17,8 +18,12 @@
 </template>
 
 <script>
+  import MESHeader from './components/MESHeader'
   export default {
     name: 'app',
+    components: {
+      MESHeader
+    },
     data() {
       return {
         isShowing: false 
