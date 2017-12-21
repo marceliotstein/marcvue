@@ -21,6 +21,11 @@ export default new Router({
       path: '/about',
       name: 'MES-About',
       component: MESAbout
+    },
+    {
+      path: '/contact',
+      name: 'MES-About',
+      component: MESAbout
     }
   ]
 })
