@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import MESProjects from '@/components/MESProjects'
 import MESAbout from '@/components/MESAbout'
+import MESContact from '@/components/MESContact'
 
 Vue.use(Router)
 
@@ -9,12 +10,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'MESHome',
+      name: 'MES-Home',
       component: MESProjects
     },
     {
-      path: '/:projset',
-      name: 'MESProjects',
+      path: '/projects/:projset',
+      name: 'MES-Projects',
       component: MESProjects
     },
     {
@@ -24,8 +25,8 @@ export default new Router({
     },
     {
       path: '/contact',
-      name: 'MES-About',
-      component: MESAbout
+      name: 'MES-Contact',
+      component: MESContact
     }
   ]
 })

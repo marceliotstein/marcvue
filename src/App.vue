@@ -1,17 +1,12 @@
 <template>
   <div class="wrapper">
-    <MESHeader></MESHeader>
     <router-view/>
   </div>
 </template>
 
 <script>
-  import MESHeader from './components/MESHeader'
   export default {
     name: 'app',
-    components: {
-      MESHeader
-    }
  }
 </script>
 
@@ -39,13 +34,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: #ffffff; 
-  text-align: center;
   color: #000000;
   margin-top: 10px;
-}
-
-.mes-title {
-  font-size: 5em;
-  color: #000000;
 }
 </style>

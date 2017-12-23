@@ -4,29 +4,36 @@
  * MarcEliotStein.com
  */
 <template>
-  <div id="mesproj">
-    <h1>{{ msg + displayMsg }}</h1>
-    <div class="buttonbox">
-      <button @click="startShow">
-        <span>Do This</span>
-      </button>
-    </div>
-    <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
-      <div class="ifshowing" v-if="isShowing">
-        <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
-           <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-           <br />
-           {{ proj.projTitle }}
-        </div>
+  <div id="mesprojects">
+    <MESHeader/>
+    <div class="projects">
+      <h1>{{ msg + displayMsg }}</h1>
+      <div class="buttonbox">
+        <button @click="startShow">
+          <span>Do This</span>
+        </button>
       </div>
-    </transition>
-    <router-view/>
+      <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+        <div class="ifshowing" v-if="isShowing">
+          <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
+             <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
+             <br />
+             {{ proj.projTitle }}
+          </div>
+        </div>
+      </transition>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+import MESHeader from '@/components/MESHeader'
 export default {
   name: 'MESProjects',
+  components: {
+    MESHeader
+  },
   data() {
     return {
       isShowing: false,
@@ -164,7 +171,10 @@ export default {
   computed: {
     filteredProjects: function() {
       let newList = new Array();
-      let catFilter = this.$route.params.projset;
+      let catFilter = 'recent';
+      if (this.$route.params.projset) {
+        catFilter = this.$route.params.projset;
+      }
       let j = 0;
       for (var i=0, len=this.projects.length; i<len; i++) {
         if (this.projects[i].projCategories.includes(catFilter)) {
@@ -232,9 +242,12 @@ export default {
     transform: translate3d(0, $yaxis, 0);
   }
 
-  #mesproj {
-    text-align: center;
+  #mesprojects {
     margin: 0 auto;
+  }
+
+  .projects {
+    text-align: center;
   }
 
   .num {
