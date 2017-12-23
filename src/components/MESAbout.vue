@@ -5,13 +5,20 @@
  */
 <template>
   <div id="mesabout">
-    <h1>{{ msg }}</h1>
+    <MESHeader/>
+    <div class="about">
+      <h1>{{ msg }}</h1>
+    </div>
   </div>
 </template>
 
 <script>
+import MESHeader from '@/components/MESHeader';
 export default {
   name: 'MESAbout',
+  components: {
+    MESHeader
+  },
   data() {
     return {
       msg: 'About this site.',
@@ -22,7 +29,9 @@ export default {
 
 <style lang="scss" scoped>
   #mesabout {
-    text-align: center;
     margin: 0 auto;
+  }
+  .about {
+    text-align: center;
   }
 </style>

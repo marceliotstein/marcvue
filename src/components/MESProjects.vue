@@ -63,7 +63,7 @@ export default {
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'php', 'drupal', 'activism', 'fundraising', 'social', 'owner', 'solo', 'recent' ],
+          projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'recent' ],
           projShow: false
         },
         { 
@@ -140,7 +140,7 @@ export default {
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
           projClass: 'bluish',
-          projCategories: [ 'php', 'drupal', 'literature', 'owner', 'social', 'design' ],
+          projCategories: [ 'php', 'drupal', 'literature', 'writing', 'owner', 'social', 'design' ],
           projShow: false
         },
         { 
@@ -196,9 +196,11 @@ export default {
         if (this.$route.params.projset=='social') {
           newMsg = 'Social Media Strategy'; 
         } else if (this.$route.params.projset=='seo') {
-          newMsg = 'SEO & Metadata'; 
-        } else if (this.$route.params.projset=='activism') {
-          newMsg = 'Political Activism'; 
+          newMsg = 'Content, SEO & Metadata'; 
+        } else if (this.$route.params.projset=='design') {
+          newMsg = 'User Experience & Design'; 
+        } else if (this.$route.params.projset=='writing') {
+          newMsg = 'Writing & Activism'; 
         } else {
           newMsg = this.$route.params.projset;
         }

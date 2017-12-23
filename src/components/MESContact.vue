@@ -5,7 +5,7 @@
  */
 <template>
   <div id="mescontact">
-    <MESBurger/>
+    <MESHeader/>
     <div id="contact">
       <h1>{{ msg }}</h1>
     </div>
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import MESBurger from '@/components/MESBurger'
+import MESHeader from '@/components/MESHeader'
 export default {
   name: 'MESContact',
   components: {
-    MESBurger
+    MESHeader
   },
   data() {
     return {
