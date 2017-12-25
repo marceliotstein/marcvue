@@ -6,9 +6,13 @@
 <template>
   <div id="mes-head">
     <MESBurger/>
-    <div class="mes-title-sequence">
-      <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
-      <div class="mes-subtitle">Social publishing & advanced technology development.</div>
+    <div class="mes-title-wrapper">
+      <div class="mes-title-sequence-dots">
+        <div class="mes-title-sequence">
+          <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
+          <div class="mes-subtitle">Social publishing & advanced technology development.</div>
+        </div>
+      </div>
     </div>
     <div class="clear"></div> 
   </div>
@@ -36,14 +40,24 @@ export default {
     clear: both;
   }
 
-  .mes-title-sequence {
+  .mes-title-wrapper {
+    width: 100%;
+  }
+
+  .mes-title-sequence-dots{
     float: right;
-    margin: 20px 0px 20px 20px;
-    padding: 20px;
+    margin: 0px;
+    padding: 0px;
     width: 50%;
     border-width: 2px;
     border-style: dotted;
     border-color: darkslategray;
+  }
+
+  .mes-title-sequence {
+    float: left;
+    margin: 20px 0px 20px 20px;
+    padding: 20px;
   }
 
   #mes-head {
