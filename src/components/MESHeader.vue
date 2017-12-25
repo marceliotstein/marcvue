@@ -10,6 +10,7 @@
       <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
       <div class="mes-subtitle">Social publishing & advanced technology development.</div>
     </div>
+    <div class="clear"></div> 
   </div>
 </template>
 
@@ -31,9 +32,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .clear {
+    clear: both;
+  }
+
   .mes-title-sequence {
-    text-align: center;
-    margin: 0 auto;
+    float: right;
+    margin: 20px 0px 20px 20px;
+    padding: 20px;
+    width: 50%;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: darkslategray;
   }
 
   #mes-head {
@@ -41,16 +51,16 @@ export default {
   }
 
   .mes-title {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
-    font-size: 2.4em;
+    font-size: 2.0em;
     color: #000000;
   }
 
   .mes-subtitle {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     font-size: 1.2em;
-    color: #000000;
+    color: darkgrey;
   }
 </style>

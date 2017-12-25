@@ -108,7 +108,7 @@ a {
       height: 40px;
       line-height: 40px;
       border-bottom-width: 2px;
-      border-bottom-color: silver;
+      border-bottom-color: darkslategray;
       border-bottom-style: dotted;
       margin-top: 0;
       opacity: 1;
@@ -163,7 +163,7 @@ a {
     left: 0;
     width: 50%;
     height: 4px;
-    background-color: silver;
+    background-color: darkslategray;
     border-radius: 5px;
     transition: $transition-duration;
   }
