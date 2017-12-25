@@ -11,9 +11,11 @@
     </label>
 
     <nav class="nav">
-      <router-link to="/" class="nav-item">Return to Home</router-link>
-      <router-link to="/about" class="nav-item">About This Site</router-link>
-      <router-link to="/contact" class="nav-item">Contact Marc</router-link>
+      <router-link to="/" class="nav-item">Home (Recent Work)</router-link>
+      <router-link to="/mp" class="nav-item">Media & Publishing</router-link>
+      <router-link to="/ame" class="nav-item">Arts, Music & Entertainment</router-link>
+      <router-link to="/hlg" class="nav-item">Health, Law & Government</router-link>
+      <router-link to="/wa" class="nav-item">Writing & Activism</router-link>
     </nav>
   </div>
 </template>
@@ -45,7 +47,7 @@ a {
 
 .burger-container {
   position: relative;
-  margin: 0px auto 0;
+  margin: 0px auto 22px;
   width: 100%;
   background-color: white;
   overflow: hidden;
@@ -137,9 +139,9 @@ a {
 .button-toggle {
   position: absolute;
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 25px;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
   background-color: white;
   border: none;
   cursor: pointer;
@@ -157,7 +159,7 @@ a {
   &:before, &:after {
     position: absolute;
     content: '';
-    top: 50%;
+    top: 20%;
     left: 0;
     width: 50%;
     height: 4px;
@@ -179,7 +181,7 @@ a {
 
 .nav {
   display: inline-block;
-  margin: 25px 25px 20px;
+  margin: 10px;
   // Don't want pointer-events as menu is closed
   pointer-events: none;
   transition: $transition-duration;
@@ -191,16 +193,16 @@ a {
   display: inline-block;
   float: left;
   clear: both;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: -6.2px;
-  height: 14px;
-  line-height: 14px;
+  height: 11px;
   text-transform: uppercase;
   white-space: nowrap;
   transform: scaleY(0.2);
   transition: $transition-duration, opacity 1s;
+  border-radius: 10px;
 
   // Setting delays for the nav items in close transition
   @for $i from 1 through $items {
@@ -216,18 +218,20 @@ a {
   // Adjusting width for the first line
   &:nth-child(1) {
     letter-spacing: -8px;
+    opacity: .8;
   }
 
   // Adjusting width for the second line
-  &:nth-child(2) {
-    letter-spacing: -7px;
+  &:nth-child(2),
+  &:nth-child(3) {
+    letter-spacing: -8px;
+    opacity: .8;
   }
 
   // Adjusting from the fourth element onwards
   &:nth-child(n + 4) {
     letter-spacing: -8px;
-    margin-top: -7px;
-    opacity: 0;
+    opacity: .8;
   }
 
   // Getting the lines for the hamburger menu icon

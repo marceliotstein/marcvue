@@ -8,10 +8,7 @@
     <MESBurger/>
     <div class="mes-title-sequence">
       <div class="mes-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
-      <router-link to="/projects/social">Social Media Strategy</router-link>
-      <router-link to="/projects/seo">Content, SEO & Metadata</router-link>
-      <router-link to="/projects/design">UX & Design</router-link>
-      <router-link to="/projects/writing">Writing & Activism</router-link>
+      <div class="mes-subtitle">Social publishing & advanced technology development.</div>
     </div>
   </div>
 </template>
@@ -46,7 +43,14 @@ export default {
   .mes-title {
     text-align: center;
     margin: 0 auto;
-    font-size: 5em;
+    font-size: 2.4em;
+    color: #000000;
+  }
+
+  .mes-subtitle {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
     color: #000000;
   }
 </style>

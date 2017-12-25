@@ -70,14 +70,14 @@ export default {
           projTitle: 'Center for Disease Control',
           projImage: '/static/cdc600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'php', 'drupal', 'health', 'government', 'seo', 'manager' ],
+          projCategories: [ 'php', 'drupal', 'health', 'government', 'searchmeta', 'manager' ],
           projShow: false
         },
         { 
           projTitle: 'Inference Data',
           projImage: '/static/inference600.jpg',
           projClass: 'bluish',
-          projCategories: [ 'java', 'law', 'seo', 'team' ],
+          projCategories: [ 'java', 'law', 'searchmeta', 'team' ],
           projShow: false
         },
         { 
@@ -98,28 +98,28 @@ export default {
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'php', 'wordpress', 'music', 'solo' ],
+          projCategories: [ 'php', 'wordpress', 'music', 'solo', 'social' ],
           projShow: false
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'java', 'music', 'solo', 'early' ],
+          projCategories: [ 'java', 'music', 'solo', 'early', 'searchmeta' ],
           projShow: false
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
           projClass: 'bluish',
-          projCategories: [ 'php', 'literature', 'solo', 'seo' ],
+          projCategories: [ 'php', 'literature', 'solo', 'searchmeta' ],
           projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
           projClass: 'bluish',
-          projCategories: [ 'php', 'drupal', 'arts', 'solo' ],
+          projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design' ],
           projShow: false
         },
         { 
@@ -154,14 +154,22 @@ export default {
           projTitle: 'iVillage.com',
           projImage: '/static/ivillage600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'java', 'publishing', 'social', 'manager', 'seo', 'early' ],
+          projCategories: [ 'java', 'publishing', 'social', 'manager', 'early' ],
           projShow: false
         },
         { 
           projTitle: 'History Channel',
           projImage: '/static/historychannel600.jpg',
           projClass: 'yellowish',
-          projCategories: [ 'java', 'publishing', 'team', 'seo' ],
+          projCategories: [ 'java', 'publishing', 'team', 'searchmeta' ],
+          projShow: false
+        },
+        { 
+          projTitle: 'MarcEliotStein.com',
+          projImage: '/static/ivillage600.jpg',
+          /*projImage: '/static/marceliotstein600.jpg',*/
+          projClass: 'yellowish',
+          projCategories: [ 'nodevue' ],
           projShow: false
         },
       ],
@@ -193,13 +201,13 @@ export default {
     displayMsg: function() {
       let newMsg = 'Recent Work';
       if (this.$route.params.projset) {
-        if (this.$route.params.projset=='social') {
-          newMsg = 'Social Media Strategy'; 
-        } else if (this.$route.params.projset=='seo') {
-          newMsg = 'Content, SEO & Metadata'; 
-        } else if (this.$route.params.projset=='design') {
-          newMsg = 'User Experience & Design'; 
-        } else if (this.$route.params.projset=='writing') {
+        if (this.$route.params.projset=='mp') {
+          newMsg = 'Media & Publishing'; 
+        } else if (this.$route.params.projset=='ame') {
+          newMsg = 'Arts, Music & Entertainment'; 
+        } else if (this.$route.params.projset=='hlg') {
+          newMsg = 'Health, Law & Government'; 
+        } else if (this.$route.params.projset=='wa') {
           newMsg = 'Writing & Activism'; 
         } else {
           newMsg = this.$route.params.projset;
