@@ -12,10 +12,10 @@
 
     <nav class="nav">
       <router-link to="/" class="nav-item">Home (Recent Work)</router-link>
-      <router-link to="/mp" class="nav-item">Media & Publishing</router-link>
-      <router-link to="/ame" class="nav-item">Arts, Music & Entertainment</router-link>
-      <router-link to="/hlg" class="nav-item">Health, Law & Government</router-link>
-      <router-link to="/wa" class="nav-item">Writing & Activism</router-link>
+      <router-link to="/projects/mp" class="nav-item">Media & Publishing</router-link>
+      <router-link to="/projects/ame" class="nav-item">Arts, Music & Entertainment</router-link>
+      <router-link to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
+      <router-link to="/projects/wa" class="nav-item">Writing & Activism</router-link>
     </nav>
   </div>
 </template>
@@ -63,24 +63,12 @@ a {
   top: -100%;
 }
 
-#toggle:focus {
-
-  & ~ .toggle-container .button-toggle {
-    /* box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);*/
-  }
-}
-
 // Styles for the 'open' state, if the checkbox is checked
 #toggle:checked {
   // Any element you need to change the style if menu is open goes here, using the sibling selector (~) as follows
 
   // Making the "X" icon using `:before` and `:after` pseudo-elements
   & ~ .toggle-container .button-toggle {
-    /*box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);*/
-
-    &:hover {
-      /* box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);*/
-    }
 
     &:before {
       transform: translateY(-50%) rotate(45deg) scale(1);
@@ -89,10 +77,6 @@ a {
     &:after {
       transform: translateY(-50%) rotate(-45deg) scale(1);
     }
-  }
-
-  &:focus ~ .toggle-container .button-toggle {
-    /*box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);*/
   }
 
   // Open nav
@@ -105,8 +89,8 @@ a {
     .nav-item {
       color: black;
       letter-spacing: 0;
-      height: 40px;
-      line-height: 40px;
+      height: 30px;
+      line-height: 30px;
       border-bottom-width: 2px;
       border-bottom-color: darkslategray;
       border-bottom-style: dotted;
@@ -202,7 +186,6 @@ a {
   white-space: nowrap;
   transform: scaleY(0.2);
   transition: $transition-duration, opacity 1s;
-  border-radius: 10px;
 
   // Setting delays for the nav items in close transition
   @for $i from 1 through $items {

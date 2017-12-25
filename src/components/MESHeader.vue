@@ -56,8 +56,8 @@ export default {
 
   .mes-title-sequence {
     float: left;
-    margin: 20px 0px 20px 20px;
-    padding: 20px;
+    margin: 10px 0px 10px 10px;
+    padding: 10px;
   }
 
   #mes-head {
