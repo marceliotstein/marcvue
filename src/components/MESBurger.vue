@@ -47,7 +47,7 @@ a {
 
 .burger-container {
   position: relative;
-  margin: 0px auto 22px;
+  margin: 0px auto 10px;
   width: 100%;
   background-color: white;
   overflow: hidden;
