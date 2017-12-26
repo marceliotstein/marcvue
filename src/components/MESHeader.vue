@@ -56,8 +56,15 @@ export default {
 
   .mes-title-sequence {
     float: left;
-    margin: 10px 0px 10px 10px;
-    padding: 10px;
+    margin: 3px 0px 3px 3px;
+    padding: 3px;
+  }
+
+  @media (min-width: 768px) {
+    .mes-title-sequence {
+      margin: 10px 0px 10px 10px;
+      padding: 10px;
+    }
   }
 
   #mes-head {
@@ -67,14 +74,26 @@ export default {
   .mes-title {
     text-align: left;
     margin: 0 auto;
-    font-size: 2.0em;
     color: #000000;
+    font-size: 1.4em;
+  }
+
+  @media (min-width: 768px) {
+    .mes-title {
+      font-size: 2.4em;
+    }
   }
 
   .mes-subtitle {
     text-align: left;
     margin: 0 auto;
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: darkgrey;
+  }
+
+  @media (min-width: 768px) {
+    .mes-subtitle {
+      font-size: 1.6em;
+    }
   }
 </style>
