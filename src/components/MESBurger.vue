@@ -52,7 +52,7 @@ a {
 
 .burger-container {
   position: relative;
-  margin: 0px auto 10px;
+  margin: 0px;
   width: 100%;
   background-color: white;
   overflow: hidden;
@@ -86,9 +86,11 @@ a {
 
   // Open nav
   & ~ .nav {
+    /*
     border-width: 1px;
     border-style: solid;
     border-color: green;
+    */
     margin-bottom: 40px;
     pointer-events: auto;
     transform: translate(50px, 50px);
@@ -131,9 +133,9 @@ a {
 .button-toggle {
   position: absolute;
   display: inline-block;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
   background-color: white;
   border: none;
   cursor: pointer;
@@ -168,8 +170,7 @@ a {
 
 .nav {
   display: inline-block;
-  margin: 10px;
-  // Don't want pointer-events as menu is closed
+  margin: 5px 0px 0px 10px;
   pointer-events: none;
   transition: $transition-duration;
 }
