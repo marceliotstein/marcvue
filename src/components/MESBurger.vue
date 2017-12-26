@@ -81,6 +81,9 @@ a {
 
   // Open nav
   & ~ .nav {
+    border-width: 1px;
+    border-style: solid;
+    border-color: green;
     margin-bottom: 40px;
     pointer-events: auto;
     transform: translate(50px, 50px);
@@ -131,11 +134,6 @@ a {
   cursor: pointer;
   border-radius: 100%;
   transition: $transition-duration + 0.1;
-
-  // Shadow on hover
-  &:hover {
-    /*box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);*/
-  }
 
   // Making the "X" icon using `:before` and `:after` pseudo-elements
   // Initially hidden because `scale(0)` transformation
@@ -230,20 +228,21 @@ a {
     transition: $transition-duration;
   }
 }
-</style>
 
-<style scoped>
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: white;
 }
