@@ -4,25 +4,30 @@
  */
 <template>
   <div class="burger-container">
-    <input id="toggle" type="checkbox">
+    <input ref="toggleburger" id="toggle" type="checkbox">
 
     <label class="toggle-container" for="toggle">
       <span class="button button-toggle"></span>
     </label>
 
     <nav class="nav">
-      <router-link to="/" class="nav-item">Home (Recent Work)</router-link>
-      <router-link to="/projects/mp" class="nav-item">Media & Publishing</router-link>
-      <router-link to="/projects/ame" class="nav-item">Arts, Music & Entertainment</router-link>
-      <router-link to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
-      <router-link to="/projects/wa" class="nav-item">Writing & Activism</router-link>
+      <router-link v-on:click.native="collapse()" to="/" class="nav-item">Home (Recent Work)</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/mp" class="nav-item">Media & Publishing</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/ame" class="nav-item">Arts, Music & Entertainment</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/wa" class="nav-item">Writing & Activism</router-link>
     </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MESBurger'
+  name: 'MESBurger',
+  methods: {
+    collapse: function (event) {
+      this.$refs.toggleburger.checked = false;
+    }
+  }
 }
 </script>
 
