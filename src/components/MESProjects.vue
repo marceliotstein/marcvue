@@ -20,8 +20,8 @@
             </div>
           </div>
         </transition>
-        <h1>{{ currentCatTitle }}</h1>
-        <p>{{ currentCatDesc }}</p>
+        <div class="cat-title">{{ currentCatTitle }}</div>
+        <div class="cat-desc">{{ currentCatDesc }}</div>
       </div>
       <div class="bigview">
         <table class="bigtable">
@@ -39,8 +39,8 @@
               </transition>
             </td>
             <td width="50%">
-             <h1>{{ currentCatTitle }}</h1>
-             <p>{{ currentCatDesc }}</p>
+             <div class="cat-title">{{ currentCatTitle }}</div>
+             <div class="cat-desc">{{ currentCatDesc }}</div>
             </td>
           </tr>
         </table>
@@ -285,6 +285,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .buttonbox {
+    margin: 5px 0px 5px 0px;
+  }
+
+  .cat-title {
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .cat-desc {
+    padding: 5px;
+    font-style: italic;
+  }
+
   .bigtable td {
     border-width: 1px;
     border-color: lawngreen;
