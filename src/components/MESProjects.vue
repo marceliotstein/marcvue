@@ -63,126 +63,108 @@ export default {
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
           projImage: '/static/lpgdivorce600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'drupal', 'law', 'solo', 'design', 'recent' ],
           projShow: false
         },
         { 
           projTitle: 'Virtual Career Network',
           projImage: '/static/vcn600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'government', 'social', 'team', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Power Bar',
           projImage: '/static/powerbar600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'product', 'team', 'recent' ],
           projShow: false 
         },
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'wa' ],
           projShow: false
         },
         { 
           projTitle: 'Center for Disease Control',
           projImage: '/static/cdc600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'drupal', 'health', 'government', 'searchmeta', 'manager', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Inference Data',
           projImage: '/static/inference600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'java', 'law', 'searchmeta', 'team', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Educational Marketer',
           projImage: '/static/educationalmarketer600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'publishing', 'solo', 'mp' ],
           projShow: false
         },
         { 
           projTitle: 'WellFormative Health',
           projImage: '/static/wellformative600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'drupal', 'health', 'solo', 'commerce', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'wordpress', 'music', 'solo', 'social', 'ame' ],
           projShow: false
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'java', 'music', 'solo', 'early', 'searchmeta', 'ame' ],
           projShow: false
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'literature', 'solo', 'searchmeta', 'ame' ],
           projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design', 'ame' ],
           projShow: false
         },
         { 
           projTitle: 'Foreign Policy',
           projImage: '/static/foreignpolicy600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'publishing', 'manager', 'social', 'mp' ],
           projShow: false
         },
         { 
           projTitle: 'Practical Handbook of Group Counseling ',
           projImage: '/static/ghppracticalhandbooks600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'php', 'drupal', 'publishing', 'commerce', 'solo', 'design', 'ame' ],
           projShow: false
         },
         { 
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'php', 'drupal', 'literature', 'writing', 'owner', 'social', 'design', 'wa' ],
           projShow: false
         },
         { 
           projTitle: 'Time Inc. New Media',
           projImage: '/static/pathfinder600.jpg',
-          projClass: 'bluish',
           projCategories: [ 'c++', 'perl', 'publishing', 'manager', 'seo', 'early', 'mp' ],
           projShow: false
         },
         { 
           projTitle: 'iVillage.com',
           projImage: '/static/ivillage600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'java', 'publishing', 'social', 'manager', 'early', 'mp' ],
           projShow: false
         },
         { 
           projTitle: 'History Channel',
           projImage: '/static/historychannel600.jpg',
-          projClass: 'yellowish',
           projCategories: [ 'java', 'publishing', 'team', 'searchmeta', 'ame' ],
           projShow: false
         },
@@ -190,7 +172,6 @@ export default {
           projTitle: 'MarcEliotStein.com',
           projImage: '/static/ivillage600.jpg',
           /*projImage: '/static/marceliotstein600.jpg',*/
-          projClass: 'yellowish',
           projCategories: [ 'nodevue' ],
           projShow: false
         },
@@ -374,6 +355,13 @@ export default {
     transform-origin: 50% 50%;
     text-align: center;
     margin: 0 auto;
+  }
+
+  @media (max-width: 767px) {
+    .proj {
+      width: 250px;
+      height: 250px;
+    }
   }
 
   @keyframes bounceframes { 
