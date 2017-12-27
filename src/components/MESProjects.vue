@@ -66,7 +66,7 @@ export default {
   },
   data() {
     return {
-      isShowing: false,
+      isShowing: true,
       projects: [
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
@@ -198,18 +198,18 @@ export default {
         },
         { 
           'catPath': 'ame',
-          'catTitle': 'Arts, Music & Entertainment',
-          'catDesc': 'jfkdlsjfdksl',
+          'catTitle': 'Music, Art & Literature',
+          'catDesc': 'It\'s been among my greatest joys to share my love of arts and culture via digital media. I\'ve built music sites for Bob Dylan and Pearl Jam, helped launch the international literary site Words Without Borders, and have been running my own litblog, Literary Kicks, since 1994 (yes, a world record as far s I know).'
         },
         {
           'catPath': 'hlg',
           'catTitle': 'Health, Law & Government',
-          'catDesc': 'cfdosfdsvc',
+          'catDesc': 'Many of my customers have been in the healthcare industry, including WellFormative.com, an alternative health site, and Virtual Career Network, a Department of Labor initiative to steer young people into either health technology or green technology. I\'ve also worked on a high-performance search engine for law firms, and designed a custom website for a New York City law firm.'
         },
         {
           'catPath': 'wa',
           'catTitle': 'Writing & Activism',
-          'catDesc': 'fjkdlafdjkl',
+          'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I began an Indiegogo fundraising drive for Pacifism for the 21st Century, an anti-war project. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
         }
       ] 
     }
@@ -263,7 +263,7 @@ export default {
   },
   methods: {
     startShow() {
-      this.isShowing = true;
+      this.isShowing = false;
     },
     afterEnter: function (el) {
       this.isShowing = false;
@@ -311,9 +311,11 @@ export default {
 
   .projtable td {
     height: 500px;
+    /*
     border-width: 1px;
     border-color: lawngreen;
     border-style: dashed;
+    */
   }
 
   @media (max-width: 767px) {
