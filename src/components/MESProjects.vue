@@ -323,11 +323,6 @@ export default {
     
   .projtable td {
     height: 500px;
-    /*
-    border-width: 1px;
-    border-color: lawngreen;
-    border-style: dashed;
-    */
   }
 
   @media (max-width: 767px) {
@@ -415,12 +410,17 @@ export default {
 
   @keyframes rollframes-slide { 
     0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(1000px, 0, 0); }
+    100% { transform: translate3d(400px, 0, 0); }
   }
 
   @keyframes rollframes-spin {
     0% { transform: rotate(0); }
-    100% { transform: rotate(1000deg); }
+    100% { transform: rotate(400deg); }
+  }
+
+  @keyframes rollframes-scale {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
   }
 
   .projmove-enter {
@@ -435,6 +435,7 @@ export default {
     width: 60px;
     height: 60px;
     animation: rollframes-slide 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-scale 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
       animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
