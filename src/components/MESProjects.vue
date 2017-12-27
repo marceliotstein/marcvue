@@ -46,15 +46,18 @@
         </table>
       </div>
     </div>
+    <MESFooter/>
   </div>
 </template>
 
 <script>
 import MESHeader from '@/components/MESHeader'
+import MESFooter from '@/components/MESFooter'
 export default {
   name: 'MESProjects',
   components: {
-    MESHeader
+    MESHeader,
+    MESFooter
   },
   data() {
     return {
