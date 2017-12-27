@@ -11,23 +11,28 @@
         </button>
       </div>
       <div class="littleview">
-        <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
-          <div class="ifshowing" v-if="isShowing">
-            <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
-               <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-               <br />
-               {{ proj.projTitle }}
-            </div>
-          </div>
-        </transition>
-        <div class="cat-title">{{ currentCatTitle }}</div>
-        <div class="cat-desc">{{ currentCatDesc }}</div>
+        <table class="projtable">
+          <tr>
+            <td width="100%">
+              <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+                <div class="ifshowing" v-if="isShowing">
+                  <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
+                     <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
+                     <br />
+                     {{ proj.projTitle }}
+                  </div>
+                </div>
+              </transition>
+              <div class="cat-title">{{ currentCatTitle }}</div>
+              <div class="cat-desc">{{ currentCatDesc }}</div>
+            </td>
+          </tr>
+        </table>
       </div>
       <div class="bigview">
-        <table class="bigtable">
+        <table class="projtable">
           <tr>
             <td width="50%">
-              <h1>LEFT SIDE</h1>
               <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowing">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
@@ -304,7 +309,8 @@ export default {
     font-style: italic;
   }
 
-  .bigtable td {
+  .projtable td {
+    height: 500px;
     border-width: 1px;
     border-color: lawngreen;
     border-style: dashed;
