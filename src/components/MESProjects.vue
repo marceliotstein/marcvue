@@ -24,9 +24,10 @@
         <p>{{ currentCatDesc }}</p>
       </div>
       <div class="bigview">
-        <table>
+        <table class="bigtable">
           <tr>
             <td width="50%">
+              <h1>LEFT SIDE</h1>
               <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowing">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
@@ -303,6 +304,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .bigtable td {
+    border-width: 1px;
+    border-color: lawngreen;
+    border-style: dashed;
+  }
+
   @media (max-width: 767px) {
     .littleview {
       display: block;
