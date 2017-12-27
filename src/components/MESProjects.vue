@@ -1,29 +1,49 @@
 /*
  * MESProjects.vue: animated display component for a list of projects
  *
- * MarcEliotStein.com
- */
 <template>
   <div id="mesprojects">
     <MESHeader/>
     <div class="projects">
-      <h1>{{ currentCatTitle }}</h1>
-      <p>{{ currentCatDesc }}</p>
       <div class="buttonbox">
         <button @click="startShow">
           <span>Do This</span>
         </button>
       </div>
-      <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
-        <div class="ifshowing" v-if="isShowing">
-          <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
-             <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-             <br />
-             {{ proj.projTitle }}
+      <div class="littleview">
+        <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+          <div class="ifshowing" v-if="isShowing">
+            <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
+               <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
+               <br />
+               {{ proj.projTitle }}
+            </div>
           </div>
-        </div>
-      </transition>
-      <router-view/>
+        </transition>
+        <h1>{{ currentCatTitle }}</h1>
+        <p>{{ currentCatDesc }}</p>
+      </div>
+      <div class="bigview">
+        <table>
+          <tr>
+            <td width="50%">
+              <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+                <div class="ifshowing" v-if="isShowing">
+                  <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
+                     <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
+                     <br />
+                     {{ proj.projTitle }}
+                  </div>
+                </div>
+              </transition>
+            </td>
+            <td width="50%">
+             <h1>{{ currentCatTitle }}</h1>
+             <p>{{ currentCatDesc }}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -283,6 +303,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 767px) {
+    .littleview {
+      display: block;
+    }
+
+    .bigview {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .big {
+      display: block;
+    }
+
+    .littleview {
+      display: none;
+    }
+  }
+
   @mixin projb($yaxis: 0) {
     transform: translate3d(0, $yaxis, 0);
   }
@@ -327,18 +367,6 @@ export default {
     transform-origin: 50% 50%;
     text-align: center;
     margin: 0 auto;
-  }
-
-  .bluish {
-    border-style: solid;
-    border-width: 3px;
-    border-color: #00005f;
-  }
-
-  .yellowish {
-    border-style: solid;
-    border-width: 3px;
-    border-color: #dfdf5f;
   }
 
   @keyframes bounceframes { 
