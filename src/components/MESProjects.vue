@@ -7,7 +7,8 @@
   <div id="mesprojects">
     <MESHeader/>
     <div class="projects">
-      <h1>{{ msg + displayMsg }}</h1>
+      <h1>{{ currentCatTitle }}</h1>
+      <p>{{ currentCatDesc }}</p>
       <div class="buttonbox">
         <button @click="startShow">
           <span>Do This</span>
@@ -174,6 +175,33 @@ export default {
         },
       ],
       msg: '',
+      categories: [
+        { 
+          'catPath': 'recent', 
+          'catTitle': 'Recent Projects',
+          'catDesc': 'I\'ve recently developed user experiences for Shape Magazine, the Allen Ginberg Estate, PowerBar and the US Department of Labor. I\'m a full-stack developer, now specializing in Vue, Node and MongoDB, with extensive experience in Drupal, WordPress & Solr.'
+        },
+        {
+          'catPath': 'mp',
+          'catTitle': 'Media & Publishing',
+          'catDesc': 'Enterprise content management systems for Meredith (Shape, Fitness), Slate (Foreign Policy) and A&E Network (History Channel). Technologies: Drupal, WordPress, Solr, Node.js.'
+        },
+        { 
+          'catPath': 'ame',
+          'catTitle': 'Arts, Music & Entertainment',
+          'catDesc': 'jfkdlsjfdksl',
+        },
+        {
+          'catPath': 'hlg',
+          'catTitle': 'Health, Law & Government',
+          'catDesc': 'cfdosfdsvc',
+        },
+        {
+          'catPath': 'wa',
+          'catTitle': 'Writing & Activism',
+          'catDesc': 'fjkdlafdjkl',
+        }
+      ] 
     }
   },
   computed: {
@@ -198,22 +226,29 @@ export default {
       }
       return newList;
     },
-    displayMsg: function() {
-      let newMsg = 'Recent Work';
+    currentCatTitle: function() {
+      let title = this.categories[0].catTitle;
       if (this.$route.params.projset) {
-        if (this.$route.params.projset=='mp') {
-          newMsg = 'Media & Publishing'; 
-        } else if (this.$route.params.projset=='ame') {
-          newMsg = 'Arts, Music & Entertainment'; 
-        } else if (this.$route.params.projset=='hlg') {
-          newMsg = 'Health, Law & Government'; 
-        } else if (this.$route.params.projset=='wa') {
-          newMsg = 'Writing & Activism'; 
-        } else {
-          newMsg = this.$route.params.projset;
+        for (var i=0, len=this.categories.length; i<len; i++) {
+          if (this.categories[i].catPath == this.$route.params.projset) {
+            title = this.categories[i].catTitle;
+            break;
+          }
         }
       }
-      return(newMsg);
+      return title;
+    },
+    currentCatDesc: function() {
+      let desc = this.categories[0].catDesc;
+      if (this.$route.params.projset) {
+        for (var i=0, len=this.categories.length; i<len; i++) {
+          if (this.categories[i].catPath == this.$route.params.projset) {
+            desc = this.categories[i].catDesc;
+            break;
+          }
+        }
+      }
+      return desc;
     }
   },
   methods: {
