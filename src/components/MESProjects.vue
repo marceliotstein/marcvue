@@ -5,14 +5,12 @@
   <div id="mesprojects">
     <MESHeader/>
     <div class="projects">
-      <div class="buttonbox">
-        <button @click="startShow">
-          <span>Do This</span>
-        </button>
-      </div>
       <div class="littleview">
         <table class="projtable">
           <tr>
+            <td width="1%">
+              <img class="table-trans" :src="transImage"/>
+            </td>
             <td width="100%">
               <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowing">
@@ -23,11 +21,16 @@
                   </div>
                 </div>
               </transition>
-              <div class="cat-title">{{ currentCatTitle }}</div>
-              <div class="cat-desc">{{ currentCatDesc }}</div>
+            </td>
+            <td width="1%">
+              <img class="table-trans" :src="transImage"/>
             </td>
           </tr>
         </table>
+        <div class="narrow-cat-title-sequence">
+          <div class="cat-title">{{ currentCatTitle }}</div>
+          <div class="cat-desc">{{ currentCatDesc }}</div>
+        </div>
       </div>
       <div class="bigview">
         <table class="projtable">
@@ -66,7 +69,7 @@ export default {
   },
   data() {
     return {
-      isShowing: true,
+      isShowing: false,
       projects: [
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
@@ -184,7 +187,7 @@ export default {
           projShow: false
         },
       ],
-      msg: '',
+      transImage: '/static/transparent.png',
       categories: [
         { 
           'catPath': 'recent', 
@@ -213,6 +216,9 @@ export default {
         }
       ] 
     }
+  },
+  mounted: function () {
+    this.startShow();
   },
   computed: {
     filteredProjects: function() {
@@ -263,7 +269,7 @@ export default {
   },
   methods: {
     startShow() {
-      this.isShowing = false;
+      this.isShowing = true;
     },
     afterEnter: function (el) {
       this.isShowing = false;
@@ -293,8 +299,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .buttonbox {
-    margin: 5px 0px 5px 0px;
+  .narrow-cat-title-sequence {
+    text-align: center;
+    margin: 0 auto;
   }
 
   .cat-title {
@@ -309,6 +316,11 @@ export default {
     font-style: italic;
   }
 
+  img.table-trans {
+    width: 1px;
+    height: 300px;
+  }
+    
   .projtable td {
     height: 500px;
     /*
