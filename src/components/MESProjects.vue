@@ -252,7 +252,6 @@ export default {
           j++;
         }
       }
-      //console.log("NEW FILTERED PROJECTS LIST!");
       return newList;
     },
     currentCatTitle: function() {
@@ -416,13 +415,19 @@ export default {
   }
 
   @keyframes bounceframes { 
-    1% { @include projb(-400px); }
-    20%, 40%, 60%, 80%, 95%, 99%, 100% { @include projb() }
-    30% { @include projb(-80px); }
-    50% { @include projb(-40px); }
-    70% { @include projb(-30px); }
-    90% { @include projb(-15px); }
-    97% { @include projb(-10px); }
+    1%   { @include projb(-200px); }
+    8%  { @include projb() }
+    16%  { @include projb(-32px); }
+    24%  { @include projb() }
+    32%  { @include projb(-16px); }
+    40%  { @include projb() }
+    48%  { @include projb(-8px); }
+    56%  { @include projb() }
+    62%  { @include projb(-4px); }
+    66%  { @include projb() }
+    69%  { @include projb(-2px); }
+    72%  { @include projb() }
+    100% { @include projb() }
   }
 
   @keyframes rollframes-slide { 
@@ -446,7 +451,7 @@ export default {
   }
 
   .projmove-enter {
-    @include projb(-400px);
+    @include projb(-200px);
   }
 
   .bouncein { 
