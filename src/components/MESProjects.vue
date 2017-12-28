@@ -221,6 +221,12 @@ export default {
       ] 
     }
   },
+  ready: function() {
+    window.addEventListener('resize', this.startShow)
+  },
+  beforeDestroy: function() {
+    window.removeEventListener('resize', this.startShow)
+  },
   mounted: function () {
     this.startShow();
   },
