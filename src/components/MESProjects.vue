@@ -20,8 +20,9 @@
                 <div class="ifshowing" v-if="isShowingNarrow">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-                     <br />
-                     {{ proj.projTitle }}
+                     <div class="proj-title">
+                       {{ proj.projTitle }}
+                     </div>
                   </div>
                 </div>
               </transition>
@@ -40,8 +41,9 @@
                 <div class="ifshowing" v-if="isShowingWide">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
-                     <br />
-                     {{ proj.projTitle }}
+                     <div class="proj-title">
+                       {{ proj.projTitle }}
+                     </div>
                   </div>
                 </div>
               </transition>
@@ -281,11 +283,9 @@ export default {
   methods: {
     startShow() {
       if (mq.matches) {
-        console.log("START WIDE");
         this.isShowingWide = true;
         this.isShowingNarrow = false;
       } else {
-        console.log("START NARROW");
         this.isShowingNarrow = true;
         this.isShowingWide = false;
       }
@@ -402,6 +402,10 @@ export default {
     transform-origin: 50% 50%;
     text-align: center;
     margin: 0 auto;
+  }
+
+  .proj-title {
+    margin: 5px 0px 0px 0px;
   }
 
   @media (max-width: 767px) {
