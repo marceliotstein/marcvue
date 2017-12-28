@@ -84,7 +84,7 @@ export default {
         { 
           projTitle: 'Virtual Career Network',
           projImage: '/static/vcn600.jpg',
-          projCategories: [ 'php', 'drupal', 'government', 'social', 'team', 'hlg' ],
+          projCategories: [ 'php', 'drupal', 'government', 'social', 'team', 'hlg', 'recent' ],
           projShow: false
         },
         { 
@@ -196,7 +196,7 @@ export default {
         { 
           'catPath': 'recent', 
           'catTitle': 'Recent Projects',
-          'catDesc': 'I\'ve recently developed user experiences for Shape Magazine, the Allen Ginberg Estate, PowerBar and the US Department of Labor. I\'m a full-stack developer, now specializing in Vue, Node and MongoDB, with extensive experience in Drupal, WordPress & Solr.'
+          'catDesc': 'I\'ve recently developed user experiences for Shape Magazine, the Allen Ginsberg Estate, PowerBar and the US Department of Labor. I\'m a full-stack developer, now specializing in Vue, Node and MongoDB, with extensive experience in Drupal, WordPress & Solr.'
         },
         {
           'catPath': 'mp',
@@ -247,6 +247,7 @@ export default {
           j++;
         }
       }
+      //console.log("NEW FILTERED PROJECTS LIST!");
       return newList;
     },
     currentCatTitle: function() {
@@ -277,16 +278,21 @@ export default {
   methods: {
     startShow() {
       if (mq.matches) {
+        console.log("START WIDE");
         this.isShowingWide = true;
         this.isShowingNarrow = false;
       } else {
+        console.log("START NARROW");
         this.isShowingNarrow = true;
         this.isShowingWide = false;
       }
     },
-    afterEnter: function (el) {
+    stopShow() {
       this.isShowingWide = false;
       this.isShowingNarrow = false;
+    },
+    afterEnter: function (el) {
+      this.stopShow();
     },
     afterLeave: function (el) {
       //
@@ -301,6 +307,7 @@ export default {
           }
           this.filteredProjects[i].projShow = false;
           this.filteredProjects[n].projShow = true;
+          //console.log("setting up " + i + " " + n + " " + this.filteredProjects[n].projTitle);
           break;
         }
       }
