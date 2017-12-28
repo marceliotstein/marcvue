@@ -349,6 +349,10 @@ export default {
   }
 
   @media (max-width: 767px) {
+    .projtable td {
+      height: 300px;
+    }
+
     .littleview {
       display: block;
     }
@@ -437,7 +441,7 @@ export default {
 
   @keyframes rollframes-spin {
     0% { transform: rotate(0); }
-    100% { transform: rotate(500deg); }
+    100% { transform: rotate(200deg); }
   }
 
   @keyframes rollframes-scale {
@@ -459,15 +463,17 @@ export default {
   }
 
   .rollout { 
-    width: 60px;
-    height: 60px;
+    /*width: 60px;
+    height: 60px;*/
     animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     animation: rollframes-fade 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
       animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
+    /*
     text-align: center;
     margin: 0 auto;
+    */
   }
 </style>
