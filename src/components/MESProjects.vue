@@ -13,7 +13,7 @@
             </td>
             <td width="100%">
               <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
-                <div class="ifshowing" v-if="isShowing">
+                <div class="ifshowing" v-if="isShowingNarrow">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
                      <br />
@@ -37,7 +37,7 @@
           <tr>
             <td width="50%">
               <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
-                <div class="ifshowing" v-if="isShowing">
+                <div class="ifshowing" v-if="isShowingWide">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
                      <br />
@@ -59,6 +59,9 @@
 </template>
 
 <script>
+// if mq.matches, we are wide viewport
+const mq = window.matchMedia("(min-width: 768px)");
+
 import MESHeader from '@/components/MESHeader'
 import MESFooter from '@/components/MESFooter'
 export default {
@@ -69,7 +72,8 @@ export default {
   },
   data() {
     return {
-      isShowing: false,
+      isShowingNarrow: false,
+      isShowingWide: false,
       projects: [
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
@@ -220,6 +224,9 @@ export default {
   mounted: function () {
     this.startShow();
   },
+  updated: function () {
+    //this.startShow();
+  },
   computed: {
     filteredProjects: function() {
       let newList = new Array();
@@ -269,32 +276,37 @@ export default {
   },
   methods: {
     startShow() {
-      this.isShowing = true;
+      if (mq.matches) {
+        this.isShowingWide = true;
+        this.isShowingNarrow = false;
+      } else {
+        this.isShowingNarrow = true;
+        this.isShowingWide = false;
+      }
     },
     afterEnter: function (el) {
-      this.isShowing = false;
+      this.isShowingWide = false;
+      this.isShowingNarrow = false;
     },
     afterLeave: function (el) {
       //
       // we already displayed this item, now display the next one
       //
-      for (var i=0, len=this.filteredProjects.length; i<len; i++) {
+      let len = this.filteredProjects.length;
+      for (var i=0; i<len; i++) {
         if (this.filteredProjects[i].projShow == true) {
-          this.filteredProjects[i].projShow = false;
           let n = i + 1;
-          if (this.filteredProjects[n]) {
-            // display next item in list 
-            this.filteredProjects[n].projShow = true;
-          } else {
-            // loop back to beginning of list 
-            this.filteredProjects[0].projShow = true;
+          if (n>=len) {
+            n = 0;
           }
+          this.filteredProjects[i].projShow = false;
+          this.filteredProjects[n].projShow = true;
           break;
         }
       }
-      this.isShowing = true;
+      this.startShow();
     }
- }
+  }
 }
 </script>
 
