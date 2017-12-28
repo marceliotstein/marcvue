@@ -87,13 +87,13 @@ export default {
   .mes-subtitle {
     text-align: left;
     margin: 0 auto;
-    font-size: 1.0em;
-    color: darkgrey;
+    font-size: .9em;
+    color: darkslategray;
   }
 
   @media (min-width: 768px) {
     .mes-subtitle {
-      font-size: 1.6em;
+      font-size: 1.4em;
     }
   }
 </style>

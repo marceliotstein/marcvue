@@ -6,6 +6,10 @@
     <MESHeader/>
     <div class="projects">
       <div class="littleview">
+        <div class="narrow-cat-title-sequence">
+          <div class="cat-title">{{ currentCatTitle }}</div>
+          <div class="cat-desc">{{ currentCatDesc }}</div>
+        </div>
         <table class="projtable">
           <tr>
             <td width="1%">
@@ -27,10 +31,6 @@
             </td>
           </tr>
         </table>
-        <div class="narrow-cat-title-sequence">
-          <div class="cat-title">{{ currentCatTitle }}</div>
-          <div class="cat-desc">{{ currentCatDesc }}</div>
-        </div>
       </div>
       <div class="bigview">
         <table class="projtable">
@@ -230,9 +230,6 @@ export default {
   mounted: function () {
     this.startShow();
   },
-  updated: function () {
-    //this.startShow();
-  },
   computed: {
     filteredProjects: function() {
       let newList = new Array();
@@ -326,19 +323,21 @@ export default {
 <style lang="scss" scoped>
   .narrow-cat-title-sequence {
     text-align: center;
-    margin: 0 auto;
+    margin: 5px auto 0px auto;
   }
 
   .cat-title {
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
   }
 
   .cat-desc {
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
-    font-style: italic;
+    font-size: .85em;
+    font-weight: 400;
   }
 
   img.table-trans {
@@ -384,17 +383,6 @@ export default {
 
   .num {
     color: #AF007E;
-  }
-
-  button {
-    background: #c62735;
-    color: white;
-    border: 0;
-    padding: 5px 15px;
-    margin: 0 10px;
-    border-radius: 4px;
-    outline: 0;
-    cursor: pointer;
   }
 
   h4 {

@@ -47,17 +47,17 @@ export default {
 
   .mes-foot-image-wrapper {
     width: 100%;
-    margin: 0 auto;
+    margin: 15px auto;
   }
     
   .mes-foot-image {
-    width: 25%;
+    width: 300px;
     margin: 0 auto;
   }
 
   @media (max-width: 767px) {
     .mes-foot-image {
-      width: 85%;
+      width: 400px;
     }
   }  
   .mes-foot-title {
