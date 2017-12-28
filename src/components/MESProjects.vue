@@ -309,7 +309,6 @@ export default {
           }
           this.filteredProjects[i].projShow = false;
           this.filteredProjects[n].projShow = true;
-          //console.log("setting up " + i + " " + n + " " + this.filteredProjects[n].projTitle);
           break;
         }
       }
@@ -463,17 +462,15 @@ export default {
   }
 
   .rollout { 
-    /*width: 60px;
-    height: 60px;*/
     animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     animation: rollframes-fade 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
       animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
-    /*
-    text-align: center;
-    margin: 0 auto;
-    */
+  }
+  
+  .rollout .proj-title {
+    display: none;
   }
 </style>
