@@ -205,9 +205,8 @@ export default {
         },
         { 
           projTitle: 'MarcEliotStein.com',
-          projImage: '/static/ivillage600.jpg',
-          /*projImage: '/static/marceliotstein600.jpg',*/
-          projCategories: [ 'vue' ],
+          projImage: '/static/meskeystone600.jpg',
+          projCategories: [ 'frontendjs' ],
           projShow: false
         },
       ],
@@ -264,9 +263,9 @@ export default {
           'catDesc': 'Wordpress projects',
         },
         {
-          'catPath': 'vue',
-          'catTitle': 'Vue.js',
-          'catDesc': 'Vue.js Projects.',
+          'catPath': 'frontendjs',
+          'catTitle': 'Node.js & Vue.js',
+          'catDesc': 'Node.js & Vue.js Projects.',
         },
         {
           'catPath': 'design',
