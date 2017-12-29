@@ -80,25 +80,25 @@ export default {
         { 
           projTitle: 'Law Firm of Laurence P. Greenberg',
           projImage: '/static/lpgdivorce600.jpg',
-          projCategories: [ 'php', 'drupal', 'law', 'solo', 'design', 'recent' ],
+          projCategories: [ 'php', 'drupal', 'law', 'hlg', 'solo', 'design', 'recent' ],
           projShow: false
         },
         { 
           projTitle: 'Shape',
           projImage: '/static/shape600.jpg',
-          projCategories: [ 'recent' ],
+          projCategories: [ 'php', 'drupal', 'recent', 'media', 'manager', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'Allen Ginsberg Project',
           projImage: '/static/allenginsberg600.jpg',
-          projCategories: [ 'recent' ],
+          projCategories: [ 'php', 'wordpress', 'recent', 'literary', 'activism', 'design', 'solo' ],
           projShow: false
         },
         { 
           projTitle: 'Eliot Katz Poetry',
-          projImage: '/static/eliotkatzpoetry00.jpg',
-          projCategories: [ 'recent' ],
+          projImage: '/static/eliotkatzpoetry600.jpg',
+          projCategories: [ 'php', 'wordpress', 'literary', 'activism', 'design', 'solo' ],
           projShow: false
         },
         { 
@@ -110,31 +110,31 @@ export default {
         { 
           projTitle: 'Power Bar',
           projImage: '/static/powerbar600.jpg',
-          projCategories: [ 'php', 'drupal', 'product', 'team', 'recent' ],
+          projCategories: [ 'php', 'drupal', 'hlg', 'marketing', 'team', 'recent' ],
           projShow: false 
         },
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
-          projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'wa', 'recent' ],
+          projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'activism', 'recent' ],
           projShow: false
         },
         { 
           projTitle: 'Center for Disease Control',
           projImage: '/static/cdc600.jpg',
-          projCategories: [ 'php', 'drupal', 'health', 'government', 'searchmeta', 'manager', 'hlg' ],
+          projCategories: [ 'php', 'drupal', 'health', 'government', 'seo', 'manager', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Inference Data',
           projImage: '/static/inference600.jpg',
-          projCategories: [ 'java', 'law', 'searchmeta', 'team', 'hlg' ],
+          projCategories: [ 'java', 'law', 'seo', 'team', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Educational Marketer',
           projImage: '/static/educationalmarketer600.jpg',
-          projCategories: [ 'php', 'drupal', 'publishing', 'solo', 'mp' ],
+          projCategories: [ 'php', 'drupal', 'publishing', 'solo', 'media' ],
           projShow: false
         },
         { 
@@ -146,68 +146,68 @@ export default {
         { 
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
-          projCategories: [ 'php', 'wordpress', 'music', 'solo', 'social', 'ame' ],
+          projCategories: [ 'php', 'wordpress', 'music', 'solo', 'social' ],
           projShow: false
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
-          projCategories: [ 'java', 'music', 'solo', 'early', 'searchmeta', 'ame' ],
+          projCategories: [ 'java', 'music', 'solo', 'early', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
-          projCategories: [ 'php', 'literature', 'solo', 'searchmeta', 'ame' ],
+          projCategories: [ 'php', 'literary', 'solo', 'seo', 'activism' ],
           projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
-          projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design', 'ame' ],
+          projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design', 'literary' ],
           projShow: false
         },
         { 
           projTitle: 'Foreign Policy',
           projImage: '/static/foreignpolicy600.jpg',
-          projCategories: [ 'php', 'drupal', 'publishing', 'manager', 'social', 'mp' ],
+          projCategories: [ 'php', 'drupal', 'manager', 'social', 'media' ],
           projShow: false
         },
         { 
           projTitle: 'Practical Handbook of Group Counseling ',
           projImage: '/static/ghppracticalhandbooks600.jpg',
-          projCategories: [ 'php', 'drupal', 'publishing', 'commerce', 'solo', 'design', 'ame' ],
+          projCategories: [ 'php', 'drupal', 'publishing', 'commerce', 'solo', 'design', 'hlg' ],
           projShow: false
         },
         { 
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
-          projCategories: [ 'php', 'drupal', 'literature', 'writing', 'owner', 'social', 'design', 'wa' ],
+          projCategories: [ 'php', 'drupal', 'literary', 'owner', 'social', 'design' ],
           projShow: false
         },
         { 
           projTitle: 'Time Inc. New Media',
           projImage: '/static/pathfinder600.jpg',
-          projCategories: [ 'c++', 'perl', 'publishing', 'manager', 'seo', 'early', 'mp' ],
+          projCategories: [ 'c++', 'perl', 'media', 'manager', 'seo', 'early' ],
           projShow: false
         },
         { 
           projTitle: 'iVillage.com',
           projImage: '/static/ivillage600.jpg',
-          projCategories: [ 'java', 'publishing', 'social', 'manager', 'early', 'mp' ],
+          projCategories: [ 'java', 'media', 'social', 'manager', 'early' ],
           projShow: false
         },
         { 
           projTitle: 'History Channel',
           projImage: '/static/historychannel600.jpg',
-          projCategories: [ 'java', 'publishing', 'team', 'searchmeta', 'ame' ],
+          projCategories: [ 'java', 'media', 'team', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'MarcEliotStein.com',
           projImage: '/static/ivillage600.jpg',
           /*projImage: '/static/marceliotstein600.jpg',*/
-          projCategories: [ 'nodevue' ],
+          projCategories: [ 'vue' ],
           projShow: false
         },
       ],
@@ -219,14 +219,19 @@ export default {
           'catDesc': 'I\'m a full-stack web developer and architect with lots of Drupal, WordPress, search engine and social marketing experience. Lately I\'m into front-end frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.'
         },
         {
-          'catPath': 'mp',
+          'catPath': 'media',
           'catTitle': 'Media & Publishing',
-          'catDesc': 'I specialize in enterprise content management systems for media and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.'
+          'catDesc': 'I specialize in enterprise content management systems for media, publishing and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.'
         },
         { 
-          'catPath': 'ame',
+          'catPath': 'literary',
+          'catTitle': 'Literary Websites',
+          'catDesc': 'Literature, arts and culture are my passion, and I\'m proud to run one of the longest-running book blogs on the planet, Literary Kicks. I\'ve recently built a new website for the estate of the great poet Allen Ginsberg. Other projects include Words Without Borders and a cartooning website for my father, Eli Stein.'
+        },
+        { 
+          'catPath': 'music',
           'catTitle': 'Music Websites',
-          'catDesc': 'It\'s been a thrill for me to use my technical skills to celebrate music and literature that I love. In 1997, I worked with a partner to build Bob Dylan\'s award-winning first website. We worked together again to build a comprensive website, including an extensive discography and concert history, for Pearl Jam in 2006.'
+          'catDesc': 'It\'s been a thrill for me to use my technical skills to celebrate some of the musical artists I love. In 1997, I worked with a partner to build Bob Dylan\'s award-winning first website. We worked together again to build a comprensive website, including an extensive discography and concert history, for Pearl Jam in 2006.'
         },
         {
           'catPath': 'hlg',
@@ -234,10 +239,75 @@ export default {
           'catDesc': 'Many of my customers have been in the healthcare industry, including WellFormative.com, an alternative health site, and Virtual Career Network, a Department of Labor initiative to steer young people into either health technology or green technology. I\'ve also worked on a high-performance search engine for law firms, and designed a custom website for a New York City law firm.'
         },
         {
-          'catPath': 'wa',
-          'catTitle': 'Writing & Activism',
-          'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I began an Indiegogo fundraising drive for Pacifism for the 21st Century, an anti-war project. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
-        }
+          'catPath': 'activism',
+          'catTitle': 'Activism & Good Causes',
+          'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I launched Pacifism for the 21st Century, an anti-war project, with an Indiegogo fundraising drive. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
+        },
+        {
+          'catPath': 'php',
+          'catTitle': 'PHP',
+          'catDesc': 'PHP projects.',
+        },
+        {
+          'catPath': 'drupal',
+          'catTitle': 'Drupal',
+          'catDesc': 'Drupal projects.',
+        },
+        {
+          'catPath': 'java',
+          'catTitle': 'Java',
+          'catDesc': 'Java projects.',
+        },
+        {
+          'catPath': 'wordpress',
+          'catTitle': 'WordPress',
+          'catDesc': 'Wordpress projects',
+        },
+        {
+          'catPath': 'vue',
+          'catTitle': 'Vue.js',
+          'catDesc': 'Vue.js Projects.',
+        },
+        {
+          'catPath': 'design',
+          'catTitle': 'Art Design',
+          'catDesc': 'These are websites I either designed or participated in designing.',
+        },
+        {
+          'catPath': 'solo',
+          'catTitle': 'Solo',
+          'catDesc': 'These are projects I worked on by myself.',
+        },
+        {
+          'catPath': 'team',
+          'catTitle': 'Team',
+          'catDesc': 'These are projects I worked on as a member of a development team.',
+        },
+        {
+          'catPath': 'manager',
+          'catTitle': 'Manager',
+          'catDesc': 'These are projects in which I managed a development team.',
+        },
+        {
+          'catPath': 'early',
+          'catTitle': 'Early',
+          'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on.',
+        },
+        {
+          'catPath': 'seo',
+          'catTitle': 'Search, SEO and Metadata',
+          'catDesc': 'I specialize in custom search engines and search optimization.',
+        },
+        {
+          'catPath': 'social',
+          'catTitle': 'Social Media Strategy',
+          'catDesc': 'I\'ve often participated in social media strategy on behalf of clients or employers. I created Foreign Policy magazine\'s Twitter presence, and helped Virtual Career Network come up with a user experience that attracts customers. I always emphasize the importance of a top-down social strategy for any online presence.',
+        },
+        {
+          'catPath': 'marketing',
+          'catTitle': 'Digital Marketing',
+          'catDesc': 'Product marketing projects.',
+        } 
       ] 
     }
   },

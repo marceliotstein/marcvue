@@ -16,7 +16,7 @@
       <router-link v-on:click.native="collapse()" to="/projects/literary" class="nav-item">Literary Websites</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/music" class="nav-item">Music Websites</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/causes" class="nav-item">Activism & Good Causes</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/activism" class="nav-item">Activism & Good Causes</router-link>
       <router-link v-on:click.native="collapse()" to="/about" class="nav-item">Technical Background</router-link>
     </nav>
   </div>
@@ -134,8 +134,8 @@ a {
 .button-toggle {
   position: absolute;
   display: inline-block;
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
   margin: 0px;
   background-color: white;
   border: none;
