@@ -84,6 +84,24 @@ export default {
           projShow: false
         },
         { 
+          projTitle: 'Shape',
+          projImage: '/static/shape600.jpg',
+          projCategories: [ 'recent' ],
+          projShow: false
+        },
+        { 
+          projTitle: 'Allen Ginsberg Project',
+          projImage: '/static/allenginsberg600.jpg',
+          projCategories: [ 'recent' ],
+          projShow: false
+        },
+        { 
+          projTitle: 'Eliot Katz Poetry',
+          projImage: '/static/eliotkatzpoetry00.jpg',
+          projCategories: [ 'recent' ],
+          projShow: false
+        },
+        { 
           projTitle: 'Virtual Career Network',
           projImage: '/static/vcn600.jpg',
           projCategories: [ 'php', 'drupal', 'government', 'social', 'team', 'hlg', 'recent' ],
@@ -98,7 +116,7 @@ export default {
         { 
           projTitle: 'Pacifism for the 21st Century',
           projImage: '/static/pacgogo600.jpg',
-          projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'wa' ],
+          projCategories: [ 'php', 'drupal', 'writing', 'fundraising', 'social', 'owner', 'solo', 'wa', 'recent' ],
           projShow: false
         },
         { 
@@ -198,17 +216,17 @@ export default {
         { 
           'catPath': 'recent', 
           'catTitle': 'Recent Projects',
-          'catDesc': 'I\'ve recently developed user experiences for Shape Magazine, the Allen Ginsberg Estate, PowerBar and the US Department of Labor. I\'m a full-stack developer, now specializing in Vue, Node and MongoDB, with extensive experience in Drupal, WordPress & Solr.'
+          'catDesc': 'I\'m a full-stack web developer and architect with lots of Drupal, WordPress, search engine and social marketing experience. Lately I\'m into front-end frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.'
         },
         {
           'catPath': 'mp',
           'catTitle': 'Media & Publishing',
-          'catDesc': 'Enterprise content management systems for Meredith (Shape, Fitness), Slate (Foreign Policy) and A&E Network (History Channel). Technologies: Drupal, WordPress, Solr, Node.js.'
+          'catDesc': 'I specialize in enterprise content management systems for media and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.'
         },
         { 
           'catPath': 'ame',
-          'catTitle': 'Music, Art & Literature',
-          'catDesc': 'It\'s been among my greatest joys to share my love of arts and culture via digital media. I\'ve built music sites for Bob Dylan and Pearl Jam, helped launch the international literary site Words Without Borders, and have been running my own litblog, Literary Kicks, since 1994 (yes, a world record as far s I know).'
+          'catTitle': 'Music Websites',
+          'catDesc': 'It\'s been a thrill for me to use my technical skills to celebrate music and literature that I love. In 1997, I worked with a partner to build Bob Dylan\'s award-winning first website. We worked together again to build a comprensive website, including an extensive discography and concert history, for Pearl Jam in 2006.'
         },
         {
           'catPath': 'hlg',
@@ -333,7 +351,7 @@ export default {
 
   .cat-desc {
     font-family: 'Montserrat', sans-serif;
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     font-size: .85em;
     font-weight: 400;
   }
