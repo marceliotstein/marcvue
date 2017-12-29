@@ -11,11 +11,13 @@
     </label>
 
     <nav class="nav">
-      <router-link v-on:click.native="collapse()" to="/" class="nav-item">Home (Recent Work)</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/mp" class="nav-item">Media & Publishing</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/ame" class="nav-item">Arts, Music & Entertainment</router-link>
+      <router-link v-on:click.native="collapse()" to="/" class="nav-item">Home (Recent Projects)</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/media" class="nav-item">Media & Publishing</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/literary" class="nav-item">Literary Websites</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/music" class="nav-item">Music Websites</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/wa" class="nav-item">Writing & Activism</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/causes" class="nav-item">Activism & Good Causes</router-link>
+      <router-link v-on:click.native="collapse()" to="/about" class="nav-item">Technical Background</router-link>
     </nav>
   </div>
 </template>
@@ -32,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$items: 3;
+$items: 7;
 $transition-duration: 0.5s;
 $transition-delay: 0.05s;
 
@@ -86,14 +88,9 @@ a {
 
   // Open nav
   & ~ .nav {
-    /*
-    border-width: 1px;
-    border-style: solid;
-    border-color: green;
-    */
     margin-bottom: 40px;
     pointer-events: auto;
-    transform: translate(50px, 50px);
+    transform: translate(30px, 30px);
 
     // Restoring nav items from "lines" in the menu icon
     .nav-item {
@@ -118,6 +115,10 @@ a {
             transition-delay: $delay;
           }
         }
+      }
+
+      &:nth-child(7) {
+        border-bottom-width: 0px;
       }
 
       // Hiding the lines
@@ -210,16 +211,22 @@ a {
 
   // Adjusting width for the second line
   &:nth-child(2),
-  &:nth-child(3) {
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
     letter-spacing: -8px;
     opacity: .8;
   }
 
+  /*
   // Adjusting from the fourth element onwards
   &:nth-child(n + 4) {
     letter-spacing: -8px;
     opacity: .8;
   }
+  */
 
   // Getting the lines for the hamburger menu icon
   &:before {
