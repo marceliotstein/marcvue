@@ -92,7 +92,7 @@ export default {
         { 
           projTitle: 'Allen Ginsberg Project',
           projImage: '/static/allenginsberg600.jpg',
-          projCategories: [ 'php', 'wordpress', 'recent', 'literary', 'activism', 'design', 'solo' ],
+          projCategories: [ 'php', 'wordpress', 'recent', 'literary', 'musiclit', 'activism', 'design', 'solo' ],
           projShow: false
         },
         { 
@@ -146,25 +146,25 @@ export default {
         { 
           projTitle: 'Pearl Jam',
           projImage: '/static/pearljam600.jpg',
-          projCategories: [ 'php', 'wordpress', 'music', 'solo', 'social' ],
+          projCategories: [ 'php', 'wordpress', 'music', 'musiclit', 'solo', 'social' ],
           projShow: false
         },
         { 
           projTitle: 'Bob Dylan',
           projImage: '/static/bobdylan600.jpg',
-          projCategories: [ 'java', 'music', 'solo', 'early', 'seo' ],
+          projCategories: [ 'java', 'music', 'musiclit', 'solo', 'early', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'Words Without Borders',
           projImage: '/static/wwb600.jpg',
-          projCategories: [ 'php', 'literary', 'solo', 'seo', 'activism' ],
+          projCategories: [ 'php', 'literary', 'musiclit', 'solo', 'seo' ],
           projShow: false
         },
         { 
           projTitle: 'Eli Stein Cartoons',
           projImage: '/static/elistein600.jpg',
-          projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design', 'literary' ],
+          projCategories: [ 'php', 'drupal', 'arts', 'solo', 'design', 'literary', 'musiclit' ],
           projShow: false
         },
         { 
@@ -182,7 +182,7 @@ export default {
         { 
           projTitle: 'Literary Kicks',
           projImage: '/static/litkicks600.jpg',
-          projCategories: [ 'php', 'drupal', 'literary', 'owner', 'social', 'design' ],
+          projCategories: [ 'php', 'drupal', 'literary', 'musiclit', 'owner', 'social', 'design' ],
           projShow: false
         },
         { 
@@ -223,14 +223,9 @@ export default {
           'catDesc': 'I specialize in enterprise content management systems for media, publishing and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.'
         },
         { 
-          'catPath': 'literary',
-          'catTitle': 'Literary Websites',
-          'catDesc': 'Literature, arts and culture are my passion, and I\'m proud to run one of the longest-running book blogs on the planet, Literary Kicks. I\'ve recently built a new website for the estate of the great poet Allen Ginsberg. Other projects include Words Without Borders and a cartooning website for my father, Eli Stein.'
-        },
-        { 
-          'catPath': 'music',
-          'catTitle': 'Music Websites',
-          'catDesc': 'It\'s been a thrill for me to use my technical skills to celebrate some of the musical artists I love. In 1997, I worked with a partner to build Bob Dylan\'s award-winning first website. We worked together again to build a comprensive website, including an extensive discography and concert history, for Pearl Jam in 2006.'
+          'catPath': 'musiclit',
+          'catTitle': 'Music & Literature',
+          'catDesc': 'It\'s been a thrill for me to build world-class websites for musicians and writers I deeply care about, including Bob Dylan and Pearl Jam. I\'ve been running Literary Kicks since 1994, and recently launched a new website for the estate of the great poet Allen Ginsberg, Other projects include Words Without Borders and cartooning website for my father, Eli Stein.'
         },
         {
           'catPath': 'hlg',
@@ -240,73 +235,53 @@ export default {
         {
           'catPath': 'activism',
           'catTitle': 'Activism & Good Causes',
-          'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I launched Pacifism for the 21st Century, an anti-war project, with an Indiegogo fundraising drive. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
+          'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I launched Pacifism for the 21st Century, an anti-war project, with an Indiegogo fundraising drive and also put the work of my activist/poet friend Eliot Katz online. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
         },
         {
           'catPath': 'php',
           'catTitle': 'PHP',
-          'catDesc': 'PHP projects.',
+          'catDesc': 'I began working with PHP in 2003 as the founding developer for Words Without Borders, a journal of international literature. I built a custom CMS all by myself for this early project, but was soon turned on to WordPress and Drupal, two PHP-based platforms that prove the amazing power of open source community-based software development.',
         },
         {
           'catPath': 'drupal',
           'catTitle': 'Drupal',
-          'catDesc': 'Drupal projects.',
+          'catDesc': 'Drupal has been my main server-side framework of choice since 2009, when I was hired by Washington Post/Slate to manage a fast-moving Drupal team for Foreign Policy magazine. I have been consistently blown away by the intelligence, generosity and integrity of the worldwide Drupal community, which includes some of the best minds in web development today.'  
         },
         {
           'catPath': 'java',
           'catTitle': 'Java',
-          'catDesc': 'Java projects.',
+          'catDesc': 'I don\'t prefer to specialize in Java anymore, but I was one of the early adopters when this comprehensive and ambitious language was invented in 1995. Most of my past Java work involved the Jive community software platform, which I used on iVillage, BobDylan.com and my own Litkicks.com. I also produced Java-based search platforms for History Channel and Inference software.',
         },
         {
           'catPath': 'wordpress',
           'catTitle': 'WordPress',
-          'catDesc': 'Wordpress projects',
+          'catDesc': 'While Drupal is usually my go-to PHP server-side framework, I also have great respect for WordPress, and tend to choose it over Drupal for projects with minimal enterprise-level requirements that will benefit from friendly technical interfaces, including two poetry websites (the Allen Ginsberg Project, Eliot Katz Poetry) that I launched in 2016.'
         },
         {
           'catPath': 'frontendjs',
           'catTitle': 'Node.js & Vue.js',
-          'catDesc': 'Node.js & Vue.js Projects.',
+          'catDesc': 'The field of web development is always changing, and this is why it\'s always exciting. Javascript front-end frameworks like Angular, React and Vue are the cutting edge today, and the Node/npm ecosystem is the glue that holds it together. I built an early version of MarcEliotStein.com with Keystone and Mongo. The current version is my work-in-progress using Vue.js, my latest obsession.',
         },
         {
           'catPath': 'design',
           'catTitle': 'Art Design',
-          'catDesc': 'These are websites I either designed or participated in designing.',
-        },
-        {
-          'catPath': 'solo',
-          'catTitle': 'Solo',
-          'catDesc': 'These are projects I worked on by myself.',
-        },
-        {
-          'catPath': 'team',
-          'catTitle': 'Team',
-          'catDesc': 'These are projects I worked on as a member of a development team.',
-        },
-        {
-          'catPath': 'manager',
-          'catTitle': 'Manager',
-          'catDesc': 'These are projects in which I managed a development team.',
+          'catDesc': 'I am a techie first and a graphic artist second, but I do have quite a bit of art experience, and I get the greatest satisfaction from web projects in which I am empowered to create the design as well as the technical foundation. You can get a sense of my hopefully unique aesthetic by checking out the Allen Ginsberg Project, LPG Divorce, the Handbook of Group Psychology, Eliot Katz Poetry, Eli Stein Cartoons, Litkicks and Pacifism21.'
         },
         {
           'catPath': 'early',
           'catTitle': 'Early',
-          'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on.',
+          'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on, including Time Warner\'s much-fabled massive project Pathfinder, the one-time dot-com favorite iVillage.com, and my first-ever consulting assignment, BobDylan.com, first launched for his excellent "Time Out of Mind" album in 1997.'
         },
         {
           'catPath': 'seo',
           'catTitle': 'Search, SEO and Metadata',
-          'catDesc': 'I specialize in custom search engines and search optimization.',
+          'catDesc': 'Web publishing is all about inter-connectedness, and this requires smart organization of metadata and awareness of search engine optimization standards. I have specialized in search platforms throughout my career. I launched a new search service using Autonomy for History.com, and then participated in a massive Autonomy-based legal platform for Inference Data. I\'ve also worked on SEO initiatives for Virtual Career Network, Shape magazine and Fitness magazine.'
         },
         {
           'catPath': 'social',
           'catTitle': 'Social Media Strategy',
           'catDesc': 'I\'ve often participated in social media strategy on behalf of clients or employers. I created Foreign Policy magazine\'s Twitter presence, and helped Virtual Career Network come up with a user experience that attracts customers. I always emphasize the importance of a top-down social strategy for any online presence.',
         },
-        {
-          'catPath': 'marketing',
-          'catTitle': 'Digital Marketing',
-          'catDesc': 'Product marketing projects.',
-        } 
       ] 
     }
   },
