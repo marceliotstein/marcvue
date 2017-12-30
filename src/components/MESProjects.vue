@@ -433,6 +433,18 @@ export default {
     }
   }
 
+  .bigview {
+    .cat-title {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .cat-desc {
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+
   @mixin projb($yaxis: 0) {
     transform: translate3d(0, $yaxis, 0);
   }

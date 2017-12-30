@@ -13,8 +13,7 @@
     <nav class="nav">
       <router-link v-on:click.native="collapse()" to="/" class="nav-item">Home (Recent Projects)</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/media" class="nav-item">Media & Publishing</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/literary" class="nav-item">Literary Websites</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/music" class="nav-item">Music Websites</router-link>
+      <router-link v-on:click.native="collapse()" to="/projects/musiclit" class="nav-item">Music & Literature</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
       <router-link v-on:click.native="collapse()" to="/projects/activism" class="nav-item">Activism & Good Causes</router-link>
       <router-link v-on:click.native="collapse()" to="/about" class="nav-item">Technical Background</router-link>
@@ -34,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$items: 7;
+$items: 6;
 $transition-duration: 0.5s;
 $transition-delay: 0.05s;
 
@@ -117,7 +116,7 @@ a {
         }
       }
 
-      &:nth-child(7) {
+      &:nth-child(6) {
         border-bottom-width: 0px;
       }
 
@@ -214,8 +213,7 @@ a {
   &:nth-child(3),
   &:nth-child(4),
   &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7) {
+  &:nth-child(6) {
     letter-spacing: -8px;
     opacity: .8;
   }
