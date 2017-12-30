@@ -74,11 +74,12 @@ export default {
 
   .mes-foot-social-links ul {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: darkslategray;
     padding-top: 5px;
     padding-bottom: 10px;
-    font-weight: 400;
     list-style: none;
-    font-size: .9em;
   }
 
   .mes-foot-social-links li {
@@ -87,6 +88,10 @@ export default {
   }
 
   @media (max-width: 767px) {
+    .mes-foot-social-links ul {
+      font-size: .9em;
+    }
+
     .mes-foot-social-links li {
       display: inline;
       margin: 0px 4px 0px 4px;
@@ -111,7 +116,7 @@ export default {
 
   .mes-foot-title {
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     padding-top: 10px;
     padding-top: 5px;
     font-size: 1.2em;

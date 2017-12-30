@@ -206,7 +206,7 @@ export default {
         { 
           projTitle: 'MarcEliotStein.com',
           projImage: '/static/meskeystone600.jpg',
-          projCategories: [ 'frontendjs' ],
+          projCategories: [ 'nodevue' ],
           projShow: false
         },
       ],
@@ -258,7 +258,7 @@ export default {
           'catDesc': 'While Drupal is usually my go-to PHP server-side framework, I also have great respect for WordPress, and tend to choose it over Drupal for projects with minimal enterprise-level requirements that will benefit from friendly technical interfaces, including two poetry websites (the Allen Ginsberg Project, Eliot Katz Poetry) that I launched in 2016.'
         },
         {
-          'catPath': 'frontendjs',
+          'catPath': 'nodevue',
           'catTitle': 'Node.js & Vue.js',
           'catDesc': 'The field of web development is always changing, and this is why it\'s always exciting. Javascript front-end frameworks like Angular, React and Vue are the cutting edge today, and the Node/npm ecosystem is the glue that holds it together. I built an early version of MarcEliotStein.com with Keystone and Mongo. The current version is my work-in-progress using Vue.js, my latest obsession.',
         },
