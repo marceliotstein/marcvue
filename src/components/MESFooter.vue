@@ -7,7 +7,7 @@
   <div id="mes-foot">
     <div class="mes-foot-inner">
       <div class="mes-foot-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
-      <div class="mes-foot-subtitle">Social publishing & advanced technology development.</div>
+      <div class="mes-foot-subtitle">Social Publishing & Advanced Technology Development</div>
       <div class="mes-foot-social-links">
         <ul>
           <li><i class="fa fa-instagram"/> <a target="_blank" href="https://instagram.com/asheresque">Instagram</a></li>

@@ -42,7 +42,7 @@
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
                      <div class="proj-title">
-                       {{ proj.projTitle }}
+                       {{ proj.projTitle }} 
                      </div>
                   </div>
                 </div>
@@ -305,15 +305,15 @@ export default {
       for (var i=0, len=this.projects.length; i<len; i++) {
         if (this.projects[i].projCategories.includes(catFilter)) {
           newList[j] = this.projects[i];
-          // initialize only the first item for display 
-          if (j==0) {
-            newList[j].projShow = true;
-          } else {
-            newList[j].projShow = false;
-          }
+          newList[j].projShow = false;
           j++;
         }
       }
+      // randomize display start position to keep it interesting
+      let n = newList.length;
+      let r = Math.floor(Math.random() * n);
+      console.log("r is " + r + " n is " + n);
+      newList[r].projShow = true;
       return newList;
     },
     currentCatTitle: function() {
@@ -375,7 +375,7 @@ export default {
         }
       }
       this.startShow();
-    }
+    },
   }
 }
 </script>
