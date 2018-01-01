@@ -1,4 +1,4 @@
-/*
+o*
  * MESProjects.vue: animated display component for a list of projects
  *
 <template>
@@ -16,7 +16,7 @@
               <img class="table-trans" :src="transImage"/>
             </td>
             <td width="100%">
-              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethod" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethods[currentRollout]" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowingNarrow">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
@@ -37,7 +37,7 @@
         <table class="projtable">
           <tr>
             <td width="50%">
-              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethod" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethods[currentRollout]" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowingWide">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
@@ -211,7 +211,8 @@ export default {
         },
       ],
       transImage: '/static/transparent.png',
-      rolloutMethod: 'rollout-slide',
+      rolloutMethods: [ 'rollout-slide', 'rollout-scale', 'rollout-spin', 'rollout-slide2', 'rollout-scale2', 'rollout-spin2' ],
+      currentRollout: 0,
       categories: [
         { 
           'catPath': 'recent', 
@@ -376,13 +377,12 @@ export default {
         }
       }
       // rotate the exit animation style
-      if (this.rolloutMethod=="rollout-scale") {
-        this.rolloutMethod = "rollout-slide"; 
-      } else if (this.rolloutMethod=="rollout-slide") {
-        this.rolloutMethod = "rollout-spin"; 
-      } else if (this.rolloutMethod=="rollout-spin") {
-        this.rolloutMethod = "rollout-scale"; 
+      this.currentRollout++;
+      if (this.currentRollout >= this.rolloutMethods.length) { 
+        this.currentRollout = 0;
       }
+      console.log("Next rollout will be " + this.rolloutMethods[this.currentRollout]);
+      // let it shine
       this.startShow();
     },
   }
@@ -518,12 +518,12 @@ export default {
 
   @keyframes rollframes-slide { 
     0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(300px, 0, 0); }
+    100% { transform: translate3d(200px, 0, 0); }
   }
 
   @keyframes rollframes-spin {
     0% { transform: rotate(0); }
-    100% { transform: rotate(200deg); }
+    100% { transform: rotate(100deg); }
   }
 
   @keyframes rollframes-scale {
@@ -536,6 +536,26 @@ export default {
     100% { opacity: 0; }
   }
 
+  @keyframes rollframes-slide2 { 
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-200px, 0, 0); }
+  }
+
+  @keyframes rollframes-spin2 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(-100deg); }
+  }
+
+  @keyframes rollframes-scale2 {
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+  }
+
+  @keyframes rollframes-fade2 {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
   .projmove-enter {
     @include projb(-200px);
   }
@@ -544,6 +564,7 @@ export default {
     animation: bounceframes 3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
 
+  /*
   .rollout { 
     animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
@@ -552,32 +573,56 @@ export default {
       animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
   }
+  */
 
   .rollout-slide { 
-    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-fade .5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-slide .8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
   }
 
   .rollout-scale { 
-    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-fade .5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-scale .8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
   }
 
   .rollout-spin { 
-    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    animation: rollframes-fade .5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     div {
-      animation: rollframes-spin 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+      animation: rollframes-spin .8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    }
+  }
+
+  .rollout-slide2 { 
+    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    div {
+      animation: rollframes-slide2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    }
+  }
+
+  .rollout-scale2 { 
+    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    div {
+      animation: rollframes-scale2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    }
+  }
+
+  .rollout-spin2 { 
+    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    div {
+      animation: rollframes-spin2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     }
   }
   
-  .rollout .proj-title,
   .rollout-slide .projtitle,
   .rollout-scale .proj-title,
-  .rollout-spin .proj-title {
+  .rollout-spin .proj-title,
+  .rollout-slide2 .projtitle,
+  .rollout-scale2 .proj-title,
+  .rollout-spin2 .proj-title {
     display: none;
   }
 </style>
