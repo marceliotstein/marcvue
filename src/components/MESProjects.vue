@@ -16,7 +16,7 @@
               <img class="table-trans" :src="transImage"/>
             </td>
             <td width="100%">
-              <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethod" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowingNarrow">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
@@ -37,7 +37,7 @@
         <table class="projtable">
           <tr>
             <td width="50%">
-              <transition name="projmove" enter-active-class="bouncein" leave-active-class="rollout" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
+              <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethod" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowingWide">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
                      <div v-bind:style="{ 'background-image': 'url(' + proj.projImage + ')' }" class="proj"></div>
@@ -211,6 +211,7 @@ export default {
         },
       ],
       transImage: '/static/transparent.png',
+      rolloutMethod: 'rollout-slide',
       categories: [
         { 
           'catPath': 'recent', 
@@ -374,6 +375,14 @@ export default {
           break;
         }
       }
+      // rotate the exit animation style
+      if (this.rolloutMethod=="rollout-scale") {
+        this.rolloutMethod = "rollout-slide"; 
+      } else if (this.rolloutMethod=="rollout-slide") {
+        this.rolloutMethod = "rollout-spin"; 
+      } else if (this.rolloutMethod=="rollout-spin") {
+        this.rolloutMethod = "rollout-scale"; 
+      }
       this.startShow();
     },
   }
@@ -493,7 +502,7 @@ export default {
 
   @keyframes bounceframes { 
     1%   { @include projb(-200px); }
-    8%  { @include projb() }
+    8%   { @include projb() }
     16%  { @include projb(-32px); }
     24%  { @include projb() }
     32%  { @include projb(-16px); }
@@ -543,8 +552,32 @@ export default {
       animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
     }
   }
+
+  .rollout-slide { 
+    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    div {
+      animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    }
+  }
+
+  .rollout-scale { 
+    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    div {
+      animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    }
+  }
+
+  .rollout-spin { 
+    animation: rollframes-fade 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    div {
+      animation: rollframes-spin 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
+    }
+  }
   
-  .rollout .proj-title {
+  .rollout .proj-title,
+  .rollout-slide .projtitle,
+  .rollout-scale .proj-title,
+  .rollout-spin .proj-title {
     display: none;
   }
 </style>
