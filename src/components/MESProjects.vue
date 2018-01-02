@@ -5,7 +5,7 @@ o*
   <div id="mesprojects">
     <MESHeader/>
     <div class="projects">
-      <div class="littleview">
+      <div class="narrowview">
         <div class="narrow-cat-title-sequence">
           <div class="cat-title">{{ currentCatTitle }}</div>
           <div class="cat-desc">{{ currentCatDesc }}</div>
@@ -33,7 +33,7 @@ o*
           </tr>
         </table>
       </div>
-      <div class="bigview">
+      <div class="wideview">
         <table class="projtable">
           <tr>
             <td width="50%">
@@ -314,7 +314,6 @@ export default {
       // randomize display start position to keep it interesting
       let n = newList.length;
       let r = Math.floor(Math.random() * n);
-      console.log("r is " + r + " n is " + n);
       newList[r].projShow = true;
       return newList;
     },
@@ -376,11 +375,9 @@ export default {
           break;
         }
       }
-      // rotate the exit animation style
-      this.currentRollout++;
-      if (this.currentRollout >= this.rolloutMethods.length) { 
-        this.currentRollout = 0;
-      }
+      // rotate the exit animation style by randomly selecting one of our styles
+      let e = this.rolloutMethods.length;
+      this.currentRollout = Math.floor(Math.random() * e);
       console.log("Next rollout will be " + this.rolloutMethods[this.currentRollout]);
       // let it shine
       this.startShow();
@@ -392,7 +389,7 @@ export default {
 <style lang="scss" scoped>
   .narrow-cat-title-sequence {
     text-align: center;
-    margin: 5px auto 0px auto;
+    margin: 5px auto 20px auto;
   }
 
   .cat-title {
@@ -423,26 +420,26 @@ export default {
       height: 300px;
     }
 
-    .littleview {
+    .narrowview {
       display: block;
     }
 
-    .bigview {
+    .wideview {
       display: none;
     }
   }
 
   @media (min-width: 768px) {
-    .big {
+    .wide {
       display: block;
     }
 
-    .littleview {
+    .narrowview {
       display: none;
     }
   }
 
-  .bigview {
+  .wideview {
     .cat-title {
       font-size: 1.2em;
       font-weight: 600;
@@ -481,8 +478,8 @@ export default {
   }
 
   .proj {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background-size: 100% 100%;
     transform-origin: 50% 50%;
     text-align: center;
@@ -495,8 +492,8 @@ export default {
 
   @media (max-width: 767px) {
     .proj {
-      width: 250px;
-      height: 250px;
+      width: 320px;
+      height: 320px;
     }
   }
 
@@ -563,17 +560,6 @@ export default {
   .bouncein { 
     animation: bounceframes 3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   }
-
-  /*
-  .rollout { 
-    animation: rollframes-slide 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
-    animation: rollframes-scale 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
-    animation: rollframes-fade 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
-    div {
-      animation: rollframes-spin 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
-    }
-  }
-  */
 
   .rollout-slide { 
     animation: rollframes-fade .5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; 
