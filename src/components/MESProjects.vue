@@ -617,7 +617,7 @@ export default {
     }
   }
   
-  .rollout-slide .projtitle,
+  .rollout-slide .proj-title,
   .rollout-scale .proj-title,
   .rollout-spin .proj-title,
   .rollout-slide2 .projtitle,
