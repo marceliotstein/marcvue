@@ -53,10 +53,8 @@ o*
             </td>
             <td class="wide-project-text-box" width="50%">
              <div class="wide-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
-             <div class="wide-cat-desc">
-               <div>{{ currentCatDesc }}</div>
-               <div>{{ currentCatContinued }}</div>
-             </div>
+             <div class="wide-cat-desc">{{ currentCatDesc }}</div>
+             <div class="wide-cat-continued">{{ currentCatContinued }}</div>
             </td>
           </tr>
         </table>
@@ -223,33 +221,32 @@ export default {
         { 
           'catPath': 'recent', 
           'catTitle': 'Recent Projects',
-          'catDesc': 'I\'m a full-stack web developer and architect with lots of Drupal, WordPress, search engine and social marketing experience. Lately I\'m into front-end frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.',
-          'catContinued': '...'
-    
+          'catDesc': 'I\'m a full-stack web developer and architect specializing in content management, user experience design, social media, taxonomy and search. I\'ve got lots of Drupal and WordPress experience but am lately obsessed with front-end Javascript frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.',
+          'catContinued': 'Web publishing is a fast-changing field, and I keep up with all the changes by working on a variety of projects for media companies (Meredith/Shape magazine), government agencies (Virtual Career Network), product companies (Post Foods/Power Bar) and smaller direct clients (the Allen Ginsberg Estate, the law firm of Laurence P. Greenberg). I also enjoy initiating my own projects, like Pacifism21.org, which I kicked off with an Indiegogo fundraising drive in 2015. The common denominator in all these projects is the use of technology to reach audiences with fresh, valuable content.'
         },
         {
           'catPath': 'media',
           'catTitle': 'Media & Publishing',
           'catDesc': 'I specialize in enterprise content management systems for media, publishing and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.',
-          'catContinued': '...'
+          'catContinued': 'Content management is an endlessly fascinating field, because web presentation is often just the tip of the iceberg when it comes to business goals for public-facing information databases. Comprehensive understanding of taxonomy and metadata is essential, not just for searchability but also in order to increase the intrinsic value of the information being organized. Understanding the social media landscape is also essential: a smart Facebook, Twitter or Snapchat strategy can be incredibly effective for media companies.'
         },
         { 
           'catPath': 'musiclit',
           'catTitle': 'Music & Literature',
-          'catDesc': 'It\'s been a thrill for me to build world-class websites for musicians and writers I deeply care about, including Bob Dylan and Pearl Jam. I\'ve been running Literary Kicks since 1994, and recently launched a new website for the estate of the great poet Allen Ginsberg, Other projects include Words Without Borders and cartooning website for my father, Eli Stein.',
-          'catContinued': '...'
+          'catDesc': 'It\'s been a thrill for me to build world-class websites for musicians and writers I deeply care about, including Bob Dylan and Pearl Jam. I\'ve been running Literary Kicks since 1994, and recently launched a new website for the estate of the great poet Allen Ginsberg, Other projects include Words Without Borders and a cartooning website for my father, Eli Stein.',
+          'catContinued': 'Perhaps the reason I gravitate towards public-facing digital projects is that I have always seen web publishing as a creative endeavor. This is a field that rewards experimentation, vivid and attractive design, and substantial, deep-content taxonomical structure. I always approach a web project as an exciting intellectual pursuit. Maybe this is one reason I\'ve managed to keep my own popular book blog Literary Kicks running for so long that it is now recognized as one of the longest running blogs in the world. It\'s simple: I treat content like it matters.' 
         },
         {
           'catPath': 'hlg',
           'catTitle': 'Health, Law & Government',
           'catDesc': 'Many of my customers have been in the healthcare industry, including WellFormative.com, an alternative health site, and Virtual Career Network, a Department of Labor initiative to steer young people into either health technology or green technology. I\'ve also worked on a high-performance search engine for law firms, and designed a custom website for a New York City law firm.',
-          'catContinued': '...'
+          'catContinued': 'There are a wide variety of projects and technologies represented in this part of my portfolio: Java, Drupal, Javascript, lots of custom CSS. These projects tended to involve mission-critical database integration, using MySQL, Oracle and MongoDB.'
         },
         {
           'catPath': 'activism',
           'catTitle': 'Activism & Good Causes',
           'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I launched Pacifism for the 21st Century, an anti-war project, with an Indiegogo fundraising drive and also put the work of my activist/poet friend Eliot Katz online. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
-          'catContinued': '...'
+          'catContinued': 'As an activist who gets fired up by positive cultural change, I often look to the power of open source software development itself as a great living example of the power of generosity, community and trust-based cooperation on a global scale. The first great community-based software project I was exposed to, years ago, was the Unix operating system, which of course evolved into Linux and MacOS. Later, I became a part of the wonderful Drupal community. The values and ethics of these open source movements is all the evidence we need to prove to ourselves and others that humans are capable of creating miraculous things together.'
         },
         {
           'catPath': 'php',
@@ -430,6 +427,11 @@ export default {
     margin: 5px auto 20px auto;
   }
 
+  .narrow-project-continued-ext-box {
+    text-align: center;
+    margin: 20px auto 20px auto;
+  }
+
   .wide-project-text-box {
     vertical-align: top;
     text-align: left;
@@ -471,7 +473,7 @@ export default {
   .wide-cat-desc,
   .wide-cat-continued {
     font-family: 'Montserrat', sans-serif;
-    padding: 0px 30px 0px 0px;
+    padding: 20px 30px 0px 0px;
     font-size: .85em;
     font-weight: 400;
   }

@@ -7,7 +7,7 @@
   <div id="mes-foot">
     <div class="mes-foot-inner">
       <div class="mes-foot-title"><router-link class="nohighlight" to="/">Marc Eliot Stein</router-link></div>
-      <div class="mes-foot-subtitle">Social Publishing & Advanced Technology Development</div>
+      <div class="mes-foot-subtitle">Social publishing & advanced technology development.</div>
       <div class="mes-foot-social-links">
         <ul>
           <li><i class="fa fa-instagram"/> <a target="_blank" href="https://instagram.com/asheresque">Instagram</a></li>
@@ -52,38 +52,56 @@ export default {
     border-radius: 3px;
     background: #125688;
     color: white;
+    font-size: 1.5em;
+    padding: 6px 3px 6px 3px;
   }
   
   .fa-twitter {
     border-radius: 3px;
     background: #55acee;
     color: white;
+    font-size: 1.5em;
+    padding: 6px 3px 6px 3px;
   }
 
   .fa-github {
     border-radius: 3px;
-    background: #000000;
+    background: #c9510c;
     color: white;
+    font-size: 1.5em;
+    padding: 6px 3px 6px 3px;
   }
 
   .fa-linkedin {
     border-radius: 3px;
     background: #007bb5;
     color: white;
+    font-size: 1.5em;
+    padding: 6px 3px 6px 3px;
+  }
+
+  .mes-foot-social-links {
+    padding: 15px 0px 15px 0px;
   }
 
   .mes-foot-social-links ul {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.1em;
     color: slategray;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding: 0px;
+    margin: 0 auto;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mes-foot-social-links li {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     margin: 0px 9px 0px 9px;
   }
 
@@ -119,7 +137,7 @@ export default {
     margin: 30px auto 0 auto;
     padding-top: 10px;
     padding-top: 5px;
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 
   .mes-foot-subtitle {
@@ -128,6 +146,6 @@ export default {
     padding-top: 5px;
     padding-bottom: 10px;
     color: slategray;
-    font-size: .9em;
+    font-size: 1.1em;
   }
 </style>
