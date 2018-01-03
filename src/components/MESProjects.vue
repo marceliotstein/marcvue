@@ -32,6 +32,9 @@ o*
             </td>
           </tr>
         </table>
+        <div class="narrow-project-continued-text-box">
+          <div class="narrow-cat-continued">{{ currentCatContinued }}</div>
+        </div>
       </div>
       <div class="wideview">
         <table class="projtable">
@@ -50,7 +53,10 @@ o*
             </td>
             <td class="wide-project-text-box" width="50%">
              <div class="wide-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
-             <div class="wide-cat-desc">{{ currentCatDesc }}</div>
+             <div class="wide-cat-desc">
+               <div>{{ currentCatDesc }}</div>
+               <div>{{ currentCatContinued }}</div>
+             </div>
             </td>
           </tr>
         </table>
@@ -211,78 +217,93 @@ export default {
         },
       ],
       transImage: '/static/transparent.png',
-      rolloutMethods: [ 'rollout-slide', 'rollout-scale', 'rollout-spin', 'rollout-slide2', 'rollout-scale2', 'rollout-spin2' ],
+      rolloutMethods: [ 'rollout-slide', 'rollout-scale', 'rollout-spin', 'rollout-slide2', 'rollout-spin2' ],
       currentRollout: 0,
       categories: [
         { 
           'catPath': 'recent', 
           'catTitle': 'Recent Projects',
-          'catDesc': 'I\'m a full-stack web developer and architect with lots of Drupal, WordPress, search engine and social marketing experience. Lately I\'m into front-end frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.'
+          'catDesc': 'I\'m a full-stack web developer and architect with lots of Drupal, WordPress, search engine and social marketing experience. Lately I\'m into front-end frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.',
+          'catContinued': '...'
+    
         },
         {
           'catPath': 'media',
           'catTitle': 'Media & Publishing',
-          'catDesc': 'I specialize in enterprise content management systems for media, publishing and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.'
+          'catDesc': 'I specialize in enterprise content management systems for media, publishing and entertainment companies. I have managed or led talented web teams on ambitious projects for Meredith (Shape), Washington Post/Slate (Foreign Policy), A&E Network (History Channel), Sony Music and Time Warner.',
+          'catContinued': '...'
         },
         { 
           'catPath': 'musiclit',
           'catTitle': 'Music & Literature',
-          'catDesc': 'It\'s been a thrill for me to build world-class websites for musicians and writers I deeply care about, including Bob Dylan and Pearl Jam. I\'ve been running Literary Kicks since 1994, and recently launched a new website for the estate of the great poet Allen Ginsberg, Other projects include Words Without Borders and cartooning website for my father, Eli Stein.'
+          'catDesc': 'It\'s been a thrill for me to build world-class websites for musicians and writers I deeply care about, including Bob Dylan and Pearl Jam. I\'ve been running Literary Kicks since 1994, and recently launched a new website for the estate of the great poet Allen Ginsberg, Other projects include Words Without Borders and cartooning website for my father, Eli Stein.',
+          'catContinued': '...'
         },
         {
           'catPath': 'hlg',
           'catTitle': 'Health, Law & Government',
-          'catDesc': 'Many of my customers have been in the healthcare industry, including WellFormative.com, an alternative health site, and Virtual Career Network, a Department of Labor initiative to steer young people into either health technology or green technology. I\'ve also worked on a high-performance search engine for law firms, and designed a custom website for a New York City law firm.'
+          'catDesc': 'Many of my customers have been in the healthcare industry, including WellFormative.com, an alternative health site, and Virtual Career Network, a Department of Labor initiative to steer young people into either health technology or green technology. I\'ve also worked on a high-performance search engine for law firms, and designed a custom website for a New York City law firm.',
+          'catContinued': '...'
         },
         {
           'catPath': 'activism',
           'catTitle': 'Activism & Good Causes',
           'catDesc': 'But what\'s all this technology good for, if we aren\'t helping build a better world? In 2015 I launched Pacifism for the 21st Century, an anti-war project, with an Indiegogo fundraising drive and also put the work of my activist/poet friend Eliot Katz online. I\'m also recently involved with World Beyond War, and am active in various #resistance activities.',
+          'catContinued': '...'
         },
         {
           'catPath': 'php',
           'catTitle': 'PHP',
           'catDesc': 'I began working with PHP in 2003 as the founding developer for Words Without Borders, a journal of international literature. I built a custom CMS all by myself for this early project, but was soon turned on to WordPress and Drupal, two PHP-based platforms that prove the amazing power of open source community-based software development.',
+          'catContinued': '...'
         },
         {
           'catPath': 'drupal',
           'catTitle': 'Drupal',
-          'catDesc': 'Drupal has been my main server-side framework of choice since 2009, when I was hired by Washington Post/Slate to manage a fast-moving Drupal team for Foreign Policy magazine. I have been consistently blown away by the intelligence, generosity and integrity of the worldwide Drupal community, which includes some of the best minds in web development today.'  
+          'catDesc': 'Drupal has been my main server-side framework of choice since 2009, when I was hired by Washington Post/Slate to manage a fast-moving Drupal team for Foreign Policy magazine. I have been consistently blown away by the intelligence, generosity and integrity of the worldwide Drupal community, which includes some of the best minds in web development today.',
+          'catContinued': '...'
         },
         {
           'catPath': 'java',
           'catTitle': 'Java',
           'catDesc': 'I don\'t prefer to specialize in Java anymore, but I was one of the early adopters when this comprehensive and ambitious language was invented in 1995. Most of my past Java work involved the Jive community software platform, which I used on iVillage, BobDylan.com and my own Litkicks.com. I also produced Java-based search platforms for History Channel and Inference software.',
+          'catContinued': '...'
         },
         {
           'catPath': 'wordpress',
           'catTitle': 'WordPress',
-          'catDesc': 'While Drupal is usually my go-to PHP server-side framework, I also have great respect for WordPress, and tend to choose it over Drupal for projects with minimal enterprise-level requirements that will benefit from friendly technical interfaces, including two poetry websites (the Allen Ginsberg Project, Eliot Katz Poetry) that I launched in 2016.'
+          'catDesc': 'While Drupal is usually my go-to PHP server-side framework, I also have great respect for WordPress, and tend to choose it over Drupal for projects with minimal enterprise-level requirements that will benefit from friendly technical interfaces, including two poetry websites (the Allen Ginsberg Project, Eliot Katz Poetry) that I launched in 2016.',
+          'catContinued': '...'
         },
         {
           'catPath': 'nodevue',
           'catTitle': 'Node.js & Vue.js',
           'catDesc': 'The field of web development is always changing, and this is why it\'s always exciting. Javascript front-end frameworks like Angular, React and Vue are the cutting edge today, and the Node/npm ecosystem is the glue that holds it together. I built an early version of MarcEliotStein.com with Keystone and Mongo. The current version is my work-in-progress using Vue.js, my latest obsession.',
+          'catContinued': '...'
         },
         {
           'catPath': 'design',
           'catTitle': 'Art Design',
-          'catDesc': 'I am a techie first and a graphic artist second, but I do have quite a bit of art experience, and I get the greatest satisfaction from web projects in which I am empowered to create the design as well as the technical foundation. You can get a sense of my hopefully unique aesthetic by checking out the Allen Ginsberg Project, LPG Divorce, the Handbook of Group Psychology, Eliot Katz Poetry, Eli Stein Cartoons, Litkicks and Pacifism21.'
+          'catDesc': 'I am a techie first and a graphic artist second, but I do have quite a bit of art experience, and I get the greatest satisfaction from web projects in which I am empowered to create the design as well as the technical foundation. You can get a sense of my hopefully unique aesthetic by checking out the Allen Ginsberg Project, LPG Divorce, the Handbook of Group Psychology, Eliot Katz Poetry, Eli Stein Cartoons, Litkicks and Pacifism21.',
+          'catContinued': '...'
         },
         {
           'catPath': 'early',
           'catTitle': 'Early',
-          'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on, including Time Warner\'s much-fabled massive project Pathfinder, the one-time dot-com favorite iVillage.com, and my first-ever consulting assignment, BobDylan.com, first launched for his excellent "Time Out of Mind" album in 1997.'
+          'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on, including Time Warner\'s much-fabled massive project Pathfinder, the one-time dot-com favorite iVillage.com, and my first-ever consulting assignment, BobDylan.com, first launched for his excellent "Time Out of Mind" album in 1997.',
+          'catContinued': '...'
         },
         {
           'catPath': 'seo',
           'catTitle': 'Search, SEO and Metadata',
-          'catDesc': 'Web publishing is all about inter-connectedness, and this requires smart organization of metadata and awareness of search engine optimization standards. I have specialized in search platforms throughout my career. I launched a new search service using Autonomy for History.com, and then participated in a massive Autonomy-based legal platform for Inference Data. I\'ve also worked on SEO initiatives for Virtual Career Network, Shape magazine and Fitness magazine.'
+          'catDesc': 'Web publishing is all about inter-connectedness, and this requires smart organization of metadata and awareness of search engine optimization standards. I have specialized in search platforms throughout my career. I launched a new search service using Autonomy for History.com, and then participated in a massive Autonomy-based legal platform for Inference Data. I\'ve also worked on SEO initiatives for Virtual Career Network, Shape magazine and Fitness magazine.',
+          'catContinued': '...'
         },
         {
           'catPath': 'social',
           'catTitle': 'Social Media Strategy',
           'catDesc': 'I\'ve often participated in social media strategy on behalf of clients or employers. I created Foreign Policy magazine\'s Twitter presence, and helped Virtual Career Network come up with a user experience that attracts customers. I always emphasize the importance of a top-down social strategy for any online presence.',
+          'catContinued': '...'
         },
       ] 
     }
@@ -340,6 +361,18 @@ export default {
         }
       }
       return desc;
+    },
+    currentCatContinued: function() {
+      let continued = this.categories[0].catContinued;
+      if (this.$route.params.projset) {
+        for (var i=0, len=this.categories.length; i<len; i++) {
+          if (this.categories[i].catPath == this.$route.params.projset) {
+            continued = this.categories[i].catContinued;
+            break;
+          }
+        }
+      }
+      return continued;
     }
   },
   methods: {
@@ -420,7 +453,8 @@ export default {
     font-weight: 600;
   }
 
-  .narrow-cat-desc {
+  .narrow-cat-desc,
+  .narrow-cat-continued {
     font-family: 'Montserrat', sans-serif;
     padding: 5px 20px 5px 20px;
     font-size: .85em;
@@ -434,7 +468,8 @@ export default {
     font-weight: 600;
   }
 
-  .wide-cat-desc {
+  .wide-cat-desc,
+  .wide-cat-continued {
     font-family: 'Montserrat', sans-serif;
     padding: 0px 30px 0px 0px;
     font-size: .85em;
@@ -578,11 +613,6 @@ export default {
     100% { transform: rotate(-100deg); }
   }
 
-  @keyframes rollframes-scale2 {
-    0% { transform: scale(1); }
-    100% { transform: scale(0); }
-  }
-
   @keyframes rollframes-fade2 {
     0% { opacity: 1; }
     100% { opacity: 0; }
@@ -624,13 +654,6 @@ export default {
     }
   }
 
-  .rollout-scale2 { 
-    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
-    div {
-      animation: rollframes-scale2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
-    }
-  }
-
   .rollout-spin2 { 
     animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     div {
@@ -642,7 +665,6 @@ export default {
   .rollout-scale .proj-title,
   .rollout-spin .proj-title,
   .rollout-slide2 .projtitle,
-  .rollout-scale2 .proj-title,
   .rollout-spin2 .proj-title {
     display: none;
   }

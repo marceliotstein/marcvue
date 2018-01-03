@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
   #mes-foot {
     text-align: center;
-    margin: 30px 0px 15px 0px;
+    margin: 70px 0px 15px 0px;
     width: 100%;
   }
 
