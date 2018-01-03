@@ -51,7 +51,7 @@ export default {
     width: 50%;
     border-width: 2px;
     border-style: dotted;
-    border-color: darkslategray;
+    border-color: slategray;
   }
 
   .mes-title-sequence {
@@ -88,7 +88,7 @@ export default {
     text-align: left;
     margin: 0 auto;
     font-size: .9em;
-    color: darkslategray;
+    color: slategray;
   }
 
   @media (min-width: 768px) {

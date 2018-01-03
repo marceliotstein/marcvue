@@ -6,9 +6,9 @@ o*
     <MESHeader/>
     <div class="projects">
       <div class="narrowview">
-        <div class="narrow-cat-title-sequence">
-          <div class="cat-title">{{ currentCatTitle }}</div>
-          <div class="cat-desc">{{ currentCatDesc }}</div>
+        <div class="narrow-project-text-box">
+          <div class="narrow-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
+          <div class="narrow-cat-desc">{{ currentCatDesc }}</div>
         </div>
         <table class="projtable">
           <tr>
@@ -36,7 +36,7 @@ o*
       <div class="wideview">
         <table class="projtable">
           <tr>
-            <td width="50%">
+            <td class="wide-show-box" width="50%">
               <transition name="projmove" enter-active-class="bouncein" :leave-active-class="rolloutMethods[currentRollout]" v-on:after-enter="afterEnter" v-on:after-leave="afterLeave">
                 <div class="ifshowing" v-if="isShowingWide">
                   <div v-for="(proj, index) in filteredProjects" v-if="proj.projShow">
@@ -48,9 +48,9 @@ o*
                 </div>
               </transition>
             </td>
-            <td width="50%">
-             <div class="cat-title">{{ currentCatTitle }}</div>
-             <div class="cat-desc">{{ currentCatDesc }}</div>
+            <td class="wide-project-text-box" width="50%">
+             <div class="wide-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
+             <div class="wide-cat-desc">{{ currentCatDesc }}</div>
             </td>
           </tr>
         </table>
@@ -387,21 +387,56 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .narrow-cat-title-sequence {
+  .wide-show-box {
+    vertical-align: top;
+    margin: 0px;
+  }
+
+  .narrow-project-text-box {
     text-align: center;
     margin: 5px auto 20px auto;
   }
 
-  .cat-title {
+  .wide-project-text-box {
+    vertical-align: top;
+    text-align: left;
+    margin: 0px;
+    padding: 30px 0px 0px 0px;
+  }
+
+  .port-title {
     font-family: 'Montserrat', sans-serif;
-    padding: 5px;
+    padding: 5px 8px 5px 0px;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-style: italic;
+    color: slategray;
+  }
+   
+  .narrow-cat-title {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 0px 12px 0px;
     font-size: 1.1em;
     font-weight: 600;
   }
 
-  .cat-desc {
+  .narrow-cat-desc {
     font-family: 'Montserrat', sans-serif;
     padding: 5px 20px 5px 20px;
+    font-size: .85em;
+    font-weight: 400;
+  }
+
+  .wide-cat-title {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .wide-cat-desc {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px 30px 0px 0px;
     font-size: .85em;
     font-weight: 400;
   }

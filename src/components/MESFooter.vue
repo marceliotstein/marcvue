@@ -76,7 +76,7 @@ export default {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1.1em;
-    color: darkslategray;
+    color: slategray;
     padding-top: 5px;
     padding-bottom: 10px;
     list-style: none;
@@ -127,7 +127,7 @@ export default {
     margin: 0 auto;
     padding-top: 5px;
     padding-bottom: 10px;
-    color: darkslategray;
+    color: slategray;
     font-size: .9em;
   }
 </style>
