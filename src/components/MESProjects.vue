@@ -557,6 +557,7 @@ export default {
   }
 
   .proj-title {
+    display: none; /* till I can create a second transition to remove unwanted bounce effect */
     margin: 5px 0px 0px 0px;
   }
 
