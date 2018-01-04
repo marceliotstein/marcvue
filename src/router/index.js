@@ -14,7 +14,7 @@ export default new Router({
       component: MESProjects
     },
     {
-      path: '/projects/:projset',
+      path: '/portfolio/:projset',
       name: 'MES-Projects',
       component: MESProjects
     },

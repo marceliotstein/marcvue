@@ -10,10 +10,10 @@
       <div class="mes-foot-subtitle">Social publishing & advanced technology development.</div>
       <div class="mes-foot-social-links">
         <ul>
-          <li><i class="fa fa-instagram"/> <a target="_blank" href="https://instagram.com/asheresque">Instagram</a></li>
-          <li><i class="fa fa-twitter"/> <a target="_blank" href="https://twitter.com/asheresque">Twitter</a></li>
-          <li><i class="fa fa-github"/> <a target="_blank" href="https://github.com/marceliotstein">GitHub</a></li>
-          <li><i class="fa fa-linkedin"/> <a target="_blank" href="https://www.linkedin.com/in/marceliotstein/">LinkedIn</a></li>
+          <li><a target="_blank" href="https://instagram.com/asheresque"><i class="fa fa-instagram"/></a> <a target="_blank" href="https://instagram.com/asheresque">Instagram</a></li>
+          <li><a target="_blank" href="https://twitter.com/asheresque"><i class="fa fa-twitter"/></a> <a target="_blank" href="https://twitter.com/asheresque">Twitter</a></li>
+          <li><a target="_blank" href="https:github.com/marceliotstein//"><i class="fa fa-github"/></a> <a target="_blank" href="https://github.com/marceliotstein">GitHub</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/marceliotstein/"><i class="fa fa-linkedin"/></a> <a target="_blank" href="https://www.linkedin.com/in/marceliotstein/">LinkedIn</a></li>
         </ul>
       </div>
       <div class="mes-foot-image-wrapper"><img class="mes-foot-image" :src="footerImage"/></div>
@@ -50,32 +50,32 @@ export default {
     
   .fa-instagram {
     border-radius: 3px;
-    background: #125688;
-    color: white;
+    color: #125688;
+    background: white;
     font-size: 1.5em;
     padding: 6px 3px 6px 3px;
   }
   
   .fa-twitter {
     border-radius: 3px;
-    background: #55acee;
-    color: white;
+    color: #55acee;
+    background: white;
     font-size: 1.5em;
     padding: 6px 3px 6px 3px;
   }
 
   .fa-github {
     border-radius: 3px;
-    background: #c9510c;
-    color: white;
+    color: #c9810c;
+    background: white;
     font-size: 1.5em;
     padding: 6px 3px 6px 3px;
   }
 
   .fa-linkedin {
     border-radius: 3px;
-    background: #007bb5;
-    color: white;
+    color: #007bb5;
+    background: white;
     font-size: 1.5em;
     padding: 6px 3px 6px 3px;
   }
@@ -103,17 +103,6 @@ export default {
     text-align: center;
     justify-content: center;
     margin: 0px 9px 0px 9px;
-  }
-
-  @media (max-width: 767px) {
-    .mes-foot-social-links ul {
-      font-size: .9em;
-    }
-
-    .mes-foot-social-links li {
-      display: inline;
-      margin: 0px 4px 0px 4px;
-    }
   }
 
   .mes-foot-image-wrapper {

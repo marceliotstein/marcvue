@@ -12,11 +12,11 @@
 
     <nav class="nav">
       <router-link v-on:click.native="collapse()" to="/" class="nav-item">Home (Recent Projects)</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/media" class="nav-item">Media & Publishing</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/musiclit" class="nav-item">Music & Literature</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/hlg" class="nav-item">Health, Law & Government</router-link>
-      <router-link v-on:click.native="collapse()" to="/projects/activism" class="nav-item">Activism & Good Causes</router-link>
-      <router-link v-on:click.native="collapse()" to="/about" class="nav-item">Technical Background</router-link>
+      <router-link v-on:click.native="collapse()" to="/portfolio/media" class="nav-item">Media & Publishing</router-link>
+      <router-link v-on:click.native="collapse()" to="/portfolio/musiclit" class="nav-item">Music & Literature</router-link>
+      <router-link v-on:click.native="collapse()" to="/portfolio/hlg" class="nav-item">Health, Law & Government</router-link>
+      <router-link v-on:click.native="collapse()" to="/portfolio/activism" class="nav-item">Activism & Good Causes</router-link>
+      <router-link v-on:click.native="collapse()" to="/about" class="nav-item">About Me & About This Site</router-link>
     </nav>
   </div>
 </template>

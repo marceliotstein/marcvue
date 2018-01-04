@@ -215,7 +215,7 @@ export default {
         },
       ],
       transImage: '/static/transparent.png',
-      rolloutMethods: [ 'rollout-slide', 'rollout-scale', 'rollout-spin', 'rollout-slide2', 'rollout-spin2' ],
+      rolloutMethods: [ 'rollout-slide', 'rollout-scale', 'rollout-spin', 'rollout-slide2', 'rollout-spin2', 'rollout-scale2' ],
       currentRollout: 0,
       categories: [
         { 
@@ -292,7 +292,7 @@ export default {
         },
         {
           'catPath': 'seo',
-          'catTitle': 'Search, SEO and Metadata',
+          'catTitle': 'Search, Taxonomy and Metadata',
           'catDesc': 'Web publishing is all about inter-connectedness, and this requires smart organization of metadata and awareness of search engine optimization standards. I have specialized in search platforms throughout my career. I launched a new search service using Autonomy for History.com, and then participated in a massive Autonomy-based legal platform for Inference Data. I\'ve also worked on SEO initiatives for Virtual Career Network, Shape magazine and Fitness magazine.',
           'catContinued': '...'
         },
@@ -601,11 +601,6 @@ export default {
     100% { transform: scale(0); }
   }
 
-  @keyframes rollframes-fade {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-
   @keyframes rollframes-slide2 { 
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(-200px, 0, 0); }
@@ -616,7 +611,12 @@ export default {
     100% { transform: rotate(-100deg); }
   }
 
-  @keyframes rollframes-fade2 {
+  @keyframes rollframes-scale2 {
+    0% { transform: scale(1); }
+    100% { transform: scale(2); }
+  }
+
+  @keyframes rollframes-fade {
     0% { opacity: 1; }
     100% { opacity: 0; }
   }
@@ -651,16 +651,23 @@ export default {
   }
 
   .rollout-slide2 { 
-    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    animation: rollframes-fade .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     div {
       animation: rollframes-slide2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     }
   }
 
   .rollout-spin2 { 
-    animation: rollframes-fade2 .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    animation: rollframes-fade .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     div {
       animation: rollframes-spin2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    }
+  }
+
+  .rollout-scale2 { 
+    animation: rollframes-fade .5s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
+    div {
+      animation: rollframes-scale2 .8s cubic-bezier(0.9, 0.2, 0.6, 0.4) both; 
     }
   }
   
