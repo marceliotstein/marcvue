@@ -13,7 +13,8 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900i');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:800');
 
 a {
   text-decoration: none;

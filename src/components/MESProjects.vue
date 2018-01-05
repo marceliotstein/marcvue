@@ -6,10 +6,11 @@ o*
     <MESHeader/>
     <div class="projects">
       <div class="narrowview">
-        <div class="narrow-project-text-box">
-          <div class="narrow-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
-          <div class="narrow-cat-desc">{{ currentCatDesc }}</div>
-        </div>
+        <div class="narrow-cat-title-box">
+          <div class="port-title">Portfolio:</div>
+          <div class="narrow-cat-title">{{ currentCatTitle }}</div>
+        </div> 
+        <div class="narrow-cat-desc">{{ currentCatDesc }}</div>
         <table class="projtable">
           <tr>
             <td width="1%">
@@ -52,7 +53,8 @@ o*
               </transition>
             </td>
             <td class="wide-project-text-box" width="50%">
-             <div class="wide-cat-title"><span class="port-title">Portfolio:</span> {{ currentCatTitle }}</div>
+             <div class="port-title">Portfolio:</div>
+             <div class="wide-cat-title">{{ currentCatTitle }}</div>
              <div class="wide-cat-desc">{{ currentCatDesc }}</div>
              <div class="wide-cat-continued">{{ currentCatContinued }}</div>
             </td>
@@ -439,41 +441,61 @@ export default {
     padding: 30px 0px 0px 0px;
   }
 
+  .narrow-cat-title-box {
+    text-align: center;
+    padding: 5px 0px 10px 0px;
+  }
+
   .port-title {
     font-family: 'Montserrat', sans-serif;
     padding: 5px 8px 5px 0px;
-    font-size: 1.1em;
-    font-weight: 600;
+    line-height: 1.5em;
+    font-size: 3em;
     font-style: italic;
-    color: slategray;
+    font-weight: 900;
+    opacity: .5;
+    color: silver;
   }
    
   .narrow-cat-title {
-    font-family: 'Montserrat', sans-serif;
-    padding: 5px 0px 12px 0px;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: .4em;
+    color: black;
+    opacity: .66;
+    transform: translate3d(0px, -25px, 0);
   }
 
-  .narrow-cat-desc,
+  .narrow-cat-desc {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px 20px 20px;
+    font-size: .85em;
+    font-weight: 400;
+  }
+
   .narrow-cat-continued {
     font-family: 'Montserrat', sans-serif;
-    padding: 5px 20px 5px 20px;
+    padding: 20px 20px 10px 20px;
     font-size: .85em;
     font-weight: 400;
   }
 
   .wide-cat-title {
-    font-family: 'Montserrat', sans-serif;
     padding: 0px;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1em;
+    font-size: 2em;
+    font-weight: 800;
+    color: black;
+    opacity: .7;
+    transform: translate3d(30px, -30px, 0);
   }
 
   .wide-cat-desc,
   .wide-cat-continued {
     font-family: 'Montserrat', sans-serif;
-    padding: 20px 30px 0px 0px;
+    padding: 10px 30px 0px 0px;
     font-size: .85em;
     font-weight: 400;
   }
