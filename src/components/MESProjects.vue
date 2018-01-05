@@ -7,7 +7,7 @@ o*
     <div class="projects">
       <div class="narrowview">
         <div class="narrow-cat-title-box">
-          <div class="port-title">Portfolio:</div>
+          <div class="narrow-port-title">Portfolio:</div>
           <div class="narrow-cat-title">{{ currentCatTitle }}</div>
         </div> 
         <div class="narrow-cat-desc">{{ currentCatDesc }}</div>
@@ -53,7 +53,7 @@ o*
               </transition>
             </td>
             <td class="wide-project-text-box" width="50%">
-             <div class="port-title">Portfolio:</div>
+             <div class="wide-port-title">Portfolio:</div>
              <div class="wide-cat-title">{{ currentCatTitle }}</div>
              <div class="wide-cat-desc">{{ currentCatDesc }}</div>
              <div class="wide-cat-continued">{{ currentCatContinued }}</div>
@@ -429,7 +429,7 @@ export default {
     margin: 5px auto 20px auto;
   }
 
-  .narrow-project-continued-ext-box {
+  .narrow-project-continued-text-box {
     text-align: center;
     margin: 20px auto 20px auto;
   }
@@ -443,14 +443,15 @@ export default {
 
   .narrow-cat-title-box {
     text-align: center;
-    padding: 5px 0px 10px 0px;
+    padding: 20px 0px 10px 0px;
   }
 
-  .port-title {
+  .narrow-port-title,
+  .wide-port-title {
     font-family: 'Montserrat', sans-serif;
     padding: 5px 8px 5px 0px;
-    line-height: 1.5em;
-    font-size: 3em;
+    line-height: .5em;
+    font-size: 2.5em;
     font-style: italic;
     font-weight: 900;
     opacity: .5;
@@ -459,17 +460,15 @@ export default {
    
   .narrow-cat-title {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 800;
-    line-height: .4em;
     color: black;
     opacity: .66;
-    transform: translate3d(0px, -25px, 0);
   }
 
   .narrow-cat-desc {
     font-family: 'Montserrat', sans-serif;
-    padding: 10px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
     font-size: .85em;
     font-weight: 400;
   }
@@ -482,14 +481,12 @@ export default {
   }
 
   .wide-cat-title {
-    padding: 0px;
+    padding: 0px 0px 0px 33px;
     font-family: 'Titillium Web', sans-serif;
-    line-height: 1em;
     font-size: 2em;
     font-weight: 800;
     color: black;
     opacity: .7;
-    transform: translate3d(30px, -30px, 0);
   }
 
   .wide-cat-desc,

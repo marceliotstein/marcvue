@@ -45,17 +45,6 @@ export default {
     margin: 0 auto;
   }
 
-  .about-title-prefix {
-    font-family: 'Montserrat', sans-serif;
-    padding: 5px 8px 5px 0px;
-    line-height: 1.5em;
-    font-size: 3em;
-    font-style: italic;
-    font-weight: 900;
-    opacity: .5;
-    color: silver;
-  }
-   
   .narrowview {
      text-align: center;
   }
@@ -84,25 +73,32 @@ export default {
     }
   }
 
+  .about-title-prefix {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 8px 5px 0px;
+    line-height: .5em;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 900;
+    opacity: .5;
+    color: silver;
+  }
+
   .narrow-about-title {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 800;
-    line-height: .4em;
     color: black;
     opacity: .66;
-    transform: translate3d(0px, -25px, 0);
   }
 
   .wide-about-title {
-    padding: 0px;
+    padding: 0px 0px 0px 33px;
     font-family: 'Titillium Web', sans-serif;
-    line-height: 1em;
     font-size: 2em;
     font-weight: 800;
     color: black;
     opacity: .7;
-    transform: translate3d(30px, -30px, 0);
   }
 
   .about-text a, 
@@ -121,7 +117,7 @@ export default {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: left;
-    margin: 0px 60px 0px 60px;
+    margin: 20px 60px 0px 60px;
   }
 
   .about-text {

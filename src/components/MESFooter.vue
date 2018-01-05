@@ -53,7 +53,7 @@ export default {
     color: #125688;
     background: white;
     font-size: 1.5em;
-    padding: 6px 3px 6px 3px;
+    padding: 0px 3px 0px 3px;
   }
   
   .fa-twitter {
@@ -61,7 +61,7 @@ export default {
     color: #55acee;
     background: white;
     font-size: 1.5em;
-    padding: 6px 3px 6px 3px;
+    padding: 0px 3px 0px 3px;
   }
 
   .fa-github {
@@ -69,7 +69,7 @@ export default {
     color: #c9810c;
     background: white;
     font-size: 1.5em;
-    padding: 6px 3px 6px 3px;
+    padding: 0px 3px 0px 3px;
   }
 
   .fa-linkedin {
@@ -77,7 +77,7 @@ export default {
     color: #007bb5;
     background: white;
     font-size: 1.5em;
-    padding: 6px 3px 6px 3px;
+    padding: 0px 3px 0px 3px;
   }
 
   .mes-foot-social-links {
@@ -107,7 +107,7 @@ export default {
 
   .mes-foot-image-wrapper {
     width: 100%;
-    margin: 15px auto;
+    margin: 10px auto;
   }
     
   .mes-foot-image {
@@ -132,8 +132,7 @@ export default {
   .mes-foot-subtitle {
     text-align: center;
     margin: 0 auto;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 0px 0px 10px 0px;
     color: slategray;
     font-size: 1.1em;
   }

@@ -1,0 +1,30 @@
+
+  .narrow-port-title,
+  .wide-port-title {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 8px 5px 0px;
+    line-height: .5em;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 900;
+    opacity: .5;
+    color: silver;
+  }
+   
+  .narrow-cat-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: black;
+    opacity: .66;
+  }
+
+  .wide-cat-title {
+    padding: 0px 0px 0px 33px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: black;
+    opacity: .7;
+  }
+
