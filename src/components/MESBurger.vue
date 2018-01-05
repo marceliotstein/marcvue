@@ -16,7 +16,7 @@
       <router-link v-on:click.native="collapse()" to="/portfolio/musiclit" class="nav-item">Music & Literature</router-link>
       <router-link v-on:click.native="collapse()" to="/portfolio/hlg" class="nav-item">Health, Law & Government</router-link>
       <router-link v-on:click.native="collapse()" to="/portfolio/activism" class="nav-item">Activism & Good Causes</router-link>
-      <router-link v-on:click.native="collapse()" to="/about" class="nav-item">About Me & About This Site</router-link>
+      <router-link v-on:click.native="collapse()" to="/about" class="nav-item">Tech Notes: About This Site</router-link>
     </nav>
   </div>
 </template>
