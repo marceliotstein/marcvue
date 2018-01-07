@@ -104,7 +104,7 @@ export default {
         { 
           projTitle: 'Eliot Katz Poetry',
           projImage: '/static/eliotkatzpoetry600.jpg',
-          projCategories: [ 'php', 'wordpress', 'literary', 'activism', 'design', 'solo' ],
+          projCategories: [ 'php', 'wordpress', 'literary', 'activism', 'design', 'solo', 'musiclit' ],
           projShow: false
         },
         { 
@@ -230,7 +230,7 @@ export default {
           'catPath': 'recent', 
           'catTitle': 'Recent Projects',
           'catDesc': 'I\'m a full-stack web developer and architect specializing in content management, user experience design, taxonomy, SEO and social media integration. I\'ve got lots of Drupal and WordPress experience but am lately obsessed with front-end Javascript frameworks like Vue.js (which powers this page). I\'m also a writer, blogger and activist. Here are a few of my recent projects.',
-          'catContinued': 'Web publishing is a fast-changing field, and I stay on top of the consstant change by working on a variety of projects for media companies (Meredith/Shape magazine), government agencies (Virtual Career Network), product companies (Post Foods/Power Bar) and smaller direct clients (the Allen Ginsberg Estate, the law firm of Laurence P. Greenberg). I also enjoy initiating my own projects, like Pacifism21.org, which I kicked off with an Indiegogo fundraising drive in 2015. The common denominator in all these projects is the use of technology to reach audiences with fresh, valuable content.'
+          'catContinued': 'Web publishing is a fast-changing field, and I stay on top of the constant change by working on a variety of projects for media companies (Meredith/Shape magazine), government agencies (Virtual Career Network), product companies (Post Foods/Power Bar) and smaller direct clients (the Allen Ginsberg Estate, the law firm of Laurence P. Greenberg). I also enjoy initiating my own projects, like Pacifism21.org, which I kicked off with an Indiegogo fundraising drive in 2015. The common denominator in all these projects is the use of technology to reach audiences with fresh, valuable content.'
         },
         {
           'catPath': 'media',
@@ -247,7 +247,7 @@ export default {
         {
           'catPath': 'hlg',
           'catTitle': 'Health, Law & Government',
-          'catDesc': 'Many of my projects has been on behalf of government/healthcare organizations, including the launch of the Community Guide for the Center for Disease Control and a Department of Labor initiative, the Virtual Career Network, designed to steer young people into either health technology or green technology. I also built an alternative health products e-commerce site for WellFormative.com. On the legal front, I was part of an innovative project to build an advanced high-performance search engine for law firms at Inference Data, and designed a custom website for a New York City law firm.',
+          'catDesc': 'Many of my projects has been on behalf of government/healthcare organizations, including the launch of the Community Guide for the Center for Disease Control and a Department of Labor initiative, the Virtual Career Network, designed to steer young people into either health technology or green technology. I also built an alternative health e-commerce site for WellFormative.com and a book site for an expert in group psychology. On the legal front, I was part of an innovative project to build an advanced high-performance search engine for law firms at Inference Data, and designed a custom website for a New York City law firm.',
           'catContinued': 'There are a wide variety of projects and technologies represented in this part of my portfolio: Java, Drupal, Javascript, lots of custom CSS. These projects tended to involve mission-critical database integration, often using MySQL, Solr and MongoDB. Among the interesting challenges I\'ve faced include architecting a real-time Oracle-to-Drupal gateway for the Postal Regulatory Commission\'s docket system, and planning a Moodle/Drupal-based education platform in a variety of African nations on behalf of a US federal agency.'
         },
         {
