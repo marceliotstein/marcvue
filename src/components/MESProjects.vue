@@ -260,55 +260,55 @@ export default {
           'catPath': 'php',
           'catTitle': 'PHP',
           'catDesc': 'I began working with PHP in 2003 as the founding developer for Words Without Borders, a journal of international literature. I built a custom CMS all by myself for this early project, but was soon turned on to WordPress and Drupal, two PHP-based platforms that prove the amazing power of open source community-based software development.',
-          'catContinued': '...'
+          'catContinued': 'As a highly multilingual software developer, I think of PHP as a good general purpose language, notable mainly not for any unique syntactical characteristics but simply for its strong position in the web ecosystem. PHP is a great language to use because it\'s been completely proven as a stable, reliable component of high-performance, high-demand web server architectures, and because it\'s so well represented by an enthusiastic, approachable expert user base within the important community of open source developers.'
         },
         {
           'catPath': 'drupal',
           'catTitle': 'Drupal',
-          'catDesc': 'Drupal has been my main server-side framework of choice since 2009, when I was hired by Washington Post/Slate to manage a fast-moving Drupal team for Foreign Policy magazine. I have been consistently blown away by the intelligence, generosity and integrity of the worldwide Drupal community, which includes some of the best minds in web development today.',
-          'catContinued': '...'
+          'catDesc': 'Drupal has been my server framework of choice since 2009, when I was hired by Washington Post/Slate to manage a fast-moving Drupal team for Foreign Policy magazine. I have been consistently blown away by the intelligence, generosity and integrity of the worldwide Drupal community, which includes some of the best minds in web development today.',
+          'catContinued': 'The future of Drupal is a hot topic today. I believe it is the most mature, well-established and important web framework in the world, as is evidenced by its impressive market share. I also think there is no better tool for server-side system integration, user authentication, security and enterprise-level content management. Where Drupal\'s position in the world is fast changing, though, is in the area of presentation. I would no longer use Drupal\'s theme layer to implement a design. Instead, I think Drupal\'s role will be strongest in the presentation of JSON-based REST services for Javascript-based front end frameworks like React and Vue to use. This is a big change for the Drupal community, but fortunately it\'s a change that the leaders of the Drupal community are fully supportive of, which is a real sign of how strong this leadership is.'
         },
         {
           'catPath': 'java',
           'catTitle': 'Java',
           'catDesc': 'I don\'t prefer to specialize in Java anymore, but I was one of the early adopters when this comprehensive and ambitious language was invented in 1995. Most of my past Java work involved the Jive community software platform, which I used on iVillage, BobDylan.com and my own Litkicks.com. I also produced Java-based search platforms for History Channel and Inference software.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'wordpress',
           'catTitle': 'WordPress',
           'catDesc': 'While Drupal is usually my go-to PHP server-side framework, I also have great respect for WordPress, and tend to choose it over Drupal for projects with minimal enterprise-level requirements that will benefit from friendly technical interfaces, including two poetry websites (the Allen Ginsberg Project, Eliot Katz Poetry) that I launched in 2016.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'nodevue',
           'catTitle': 'Node.js & Vue.js',
           'catDesc': 'The field of web development is always changing, and this is why it\'s always exciting. Javascript front-end frameworks like Angular, React and Vue are the cutting edge today, and the Node/npm ecosystem is the glue that holds it together. I built an early version of MarcEliotStein.com with Keystone and Mongo. The current version is my work-in-progress using Vue.js, my latest obsession.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'design',
           'catTitle': 'Art Design',
           'catDesc': 'I am a techie first and a graphic artist second, but I do have quite a bit of art experience, and I get the greatest satisfaction from web projects in which I am empowered to create the design as well as the technical foundation. You can get a sense of my hopefully unique aesthetic by checking out the Allen Ginsberg Project, LPG Divorce, the Handbook of Group Psychology, Eliot Katz Poetry, Eli Stein Cartoons, Litkicks and Pacifism21.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'early',
-          'catTitle': 'Early',
+          'catTitle': 'Early Web Projects',
           'catDesc': 'I have been building websites since the earliest days of Silicon Alley in New York City. Here are some of the early projects I worked on, including Time Warner\'s much-fabled massive project Pathfinder, the one-time dot-com favorite iVillage.com, and my first-ever consulting assignment, BobDylan.com, first launched for his excellent "Time Out of Mind" album in 1997.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'seo',
           'catTitle': 'Search, Taxonomy and Metadata',
           'catDesc': 'Web publishing is all about inter-connectedness, and this requires smart organization of metadata and awareness of search engine optimization standards. I have specialized in search platforms throughout my career. I launched a new search service using Autonomy for History.com, and then participated in a massive Autonomy-based legal platform for Inference Data. I\'ve also worked on SEO initiatives for Virtual Career Network, Shape magazine and Fitness magazine.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
         {
           'catPath': 'social',
           'catTitle': 'Social Media Strategy',
           'catDesc': 'I\'ve often participated in social media strategy on behalf of clients or employers. I created Foreign Policy magazine\'s Twitter presence, and helped Virtual Career Network come up with a user experience that attracts customers. I always emphasize the importance of a top-down social strategy for any online presence.',
-          'catContinued': '...'
+          'catContinued': ' '
         },
       ] 
     }
